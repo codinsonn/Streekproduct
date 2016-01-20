@@ -1,0 +1,23 @@
+{
+
+  "ext": "js, jsx,  json, html",
+
+  "watch": [
+    "/modules/*",
+    "/plugins/*",
+    "/models/*",
+    "/routes/*"
+  ],
+
+  "ignore": [
+    "/js/*",
+    "/_js/*",
+    "/_scss/*",
+    "/node_modules/*",
+    "_config.js",
+    "gulpfile.js",
+    "package.json",
+    "webpack.config.js"
+  ]
+
+}

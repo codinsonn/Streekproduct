@@ -1,0 +1,164 @@
+@import 'variables';
+@import 'reset';
+@import 'mixins';
+@import 'petals';
+
+@include font-face('pacificoregular');
+@include font-face('pt_sansbold');
+@include font-face('pt_sansregular');
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 2000px;
+  font-size: 1em;
+  font-family: 'Helvetica neue', Helvetica, Arial, sans-serif;
+}
+
+/* --- 1: Header ------------------------------------------------------------------- */
+
+body > header {
+
+  position: absolute;
+  width: 100%;
+  height: 500px;
+
+  .headerBg {
+    position: absolute;
+    top: 0px; left: 0px;
+    width: 100%;
+    height: 249px;
+    @include bgImgUrl('HeaderBg.png');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-color: $purpleHeader;
+    z-index: 0;
+  }
+
+  h1.title a{
+    position: absolute;
+    width: 297px;
+    height: 68px;
+    top: 80px;
+    left: 50%;
+    @include bgImgUrl('TypischGents.png');
+    margin-left: -138px;
+    z-index: 5;
+  }
+
+  h1 a span{
+    display: none;
+  }
+
+  .headerCuberdons{
+    position: absolute;
+    width: 459px;
+    height: 243px;
+    top: 170px;
+    left: 50%;
+    margin-left: -230px;
+    @include bgImgUrl('CuberdonsHeader.png');
+    z-index: 8;
+  }
+
+  .petal{
+    position: absolute;
+    z-index: 10;
+  }
+
+  .petal1{ top: 276px; left: 0px; }
+  .petal2{ top: 196px; left: 6%; }
+  .petal3{ top: 211px; left: 15%; }
+  .petal4{ top: 156px; left: 50%; margin-left: -260px; z-index: 5; }
+  .petal5{ top: 196px; left: 65%; }
+  .petal6{ top: 285px; left: 73%; }
+  .petal7{ top: 187px; left: 80%; }
+  .petal8{ top: 302px; right: 0px; }
+  .petal9{ top: 190px; right: 0px; }
+
+  h2{
+    position: absolute;
+    width: 400px;
+    top: 430px;
+    left: 50%;
+    margin-left: -200px;
+    font-size: 6em;
+    font-weight: bold;
+    font-family: 'pt_sansbold';
+    text-align: center;
+    color: $purpleMain;
+  }
+
+  h3{
+    position: absolute;
+    width: 680px;
+    top: 530px;
+    left: 50%;
+    margin-left: -340px;
+    font-size: 5em;
+    font-family: 'pacifico';
+    text-align: center;
+    color: $pinkLight;
+    span{ color: $pinkDark; }
+  }
+
+  .heartDivider{
+    position: absolute;
+    width: 400px;
+    height: 37px;
+    top: 630px;
+    left: 50%;
+    margin-left: -200px;
+    @include bgImgUrl('HeartDivider.png');
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  p{
+    position: absolute;
+    width: 620px;
+    top: 710px;
+    left: 50%;
+    margin-left: -310px;
+    font-size: 1.6em;
+    font-weight: bold;
+    font-family: 'pt_sansbold';
+    line-height: 1.5em;
+    text-align: center;
+    color: $purpleMain;
+  }
+
+}
+
+/* --- 2: Ideaal Cadeau ------------------------------------------------------------------- */
+
+
+
+/* --- 3: Deel en Win ------------------------------------------------------------------- */
+
+
+
+/* --- X: Footer ------------------------------------------------------------------- */
+
+
+
+/* --- Spritesheet ------------------------------------------------------------------- */
+
+.petal1{ @include sprite($-flower-petals1); }
+.petal2{ @include sprite($-flower-petals2); }
+.petal3{ @include sprite($-flower-petals3); }
+.petal4{ @include sprite($-flower-petals4); }
+.petal5{ @include sprite($-flower-petals5); }
+.petal6{ @include sprite($-flower-petals6); }
+.petal7{ @include sprite($-flower-petals7); }
+.petal8{ @include sprite($-flower-petals8); }
+.petal9{ @include sprite($-flower-petals9); }
+
