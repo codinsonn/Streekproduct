@@ -133,13 +133,12 @@ div.burger .bun {
   -webkit-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
-  transition: -webkit-transform .4s, opacity .4s, top .4s, margin-top .4s;
-  transition: transform .4s, opacity .4s, top .4s, margin-top .4s;
+  transition: -webkit-transform .4s, opacity .4s, top .4s;
+  transition: transform .4s, opacity .4s, top .4s;
 }
 
 div.burger .topBun {
   top: 0px;
-  margin-top: 0px;
 }
 
 div.burger .midBun {
@@ -151,9 +150,8 @@ div.burger .bottomBun {
   bottom: 0px;
 }
 
-div.burger.open .topBun {
+div.burger.open .topBun, div.burger.open .bottomBun {
   top: 50%;
-  margin-top: -1px;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
@@ -165,7 +163,6 @@ div.burger.open .midBun {
 
 div.burger.open .bottomBun {
   top: 50%;
-  margin-top: -1px;
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
@@ -177,8 +174,33 @@ nav {
   left: 0px;
   background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/MenuToggleBg.svg");
   background-repeat: no-repeat;
-  transition: width .8s, height .8s, background-size .8s;
+  transition: width .7s, height .8s, background-size .7s;
+  overflow: hidden;
   z-index: 40;
+}
+
+nav ul {
+  position: absolute;
+  top: 50px;
+  left: 38px;
+}
+
+nav ul li {
+  position: relative;
+  margin-bottom: 20px;
+  list-style: none;
+  font-size: 2.2em;
+  font-weight: bold;
+  font-family: 'PT Sans', sans-serif;
+  text-transform: uppercase;
+  transition: margin-left .4s, opacity .8s;
+}
+
+nav ul li a {
+  padding-left: 5px;
+  text-decoration: none;
+  color: #FFFFFF;
+  transition: padding-left .3s, color .2s;
 }
 
 nav.closed {
@@ -187,17 +209,36 @@ nav.closed {
   background-size: 60px 60px;
 }
 
+nav.closed ul li {
+  margin-left: -380px;
+  opacity: 0;
+}
+
 nav.open {
-  width: 360px;
-  height: 114%;
-  background-size: 360px 114%;
+  width: 300px;
+  height: 140%;
+  background-size: 300px 140%;
+}
+
+nav.open ul li {
+  margin-left: 0px;
+  opacity: 1;
+}
+
+nav.open a:hover, nav.open a.active {
+  padding-left: 10px;
+  color: #FFD0DA;
+}
+
+nav.open a.active {
+  border-left: 3px solid #FFD0DA;
 }
 
 /* --- 1: Header ------------------------------------------------------------------- */
 body > header {
   position: absolute;
   width: 100%;
-  height: 500px;
+  height: 760px;
 }
 
 body > header .headerBg {
@@ -347,14 +388,15 @@ body > header p {
 }
 
 /* --- 2: Ideaal Cadeau ------------------------------------------------------------------- */
-#idealPresent {
+#cadeaus {
   position: absolute;
   width: 100%;
+  height: 760px;
   top: 760px;
   background-color: #FFFFFF;
 }
 
-#idealPresent header h1 {
+#cadeaus header h1 {
   position: absolute;
   width: 500px;
   top: 300px;
@@ -368,7 +410,7 @@ body > header p {
   z-index: 20;
 }
 
-#idealPresent .valentineBox {
+#cadeaus .valentineBox {
   position: absolute;
   width: 403px;
   height: 237px;
@@ -379,7 +421,7 @@ body > header p {
   z-index: 15;
 }
 
-#idealPresent .decorLeft {
+#cadeaus .decorLeft {
   position: absolute;
   width: 355px;
   height: 275px;
@@ -389,7 +431,7 @@ body > header p {
   z-index: 0;
 }
 
-#idealPresent .decorRight {
+#cadeaus .decorRight {
   position: absolute;
   width: 345px;
   height: 151px;
@@ -399,7 +441,7 @@ body > header p {
   z-index: 0;
 }
 
-#idealPresent .cadeauBg {
+#cadeaus .cadeauBg {
   position: absolute;
   width: 100%;
   height: 628px;
@@ -409,7 +451,7 @@ body > header p {
   z-index: 5;
 }
 
-#idealPresent p {
+#cadeaus p {
   position: absolute;
   width: 576px;
   top: 404px;
@@ -424,11 +466,11 @@ body > header p {
   z-index: 20;
 }
 
-#idealPresent p span {
+#cadeaus p span {
   color: #FFD0DA;
 }
 
-#idealPresent a {
+#cadeaus a {
   position: absolute;
   width: 250px;
   top: 604px;
@@ -447,7 +489,7 @@ body > header p {
   z-index: 20;
 }
 
-#idealPresent .raspberry {
+#cadeaus .raspberry {
   position: absolute;
   width: 143px;
   height: 161px;
@@ -458,7 +500,7 @@ body > header p {
   z-index: 20;
 }
 
-#idealPresent .petal3 {
+#cadeaus .petal3 {
   position: absolute;
   top: 580px;
   left: 75%;
@@ -466,14 +508,15 @@ body > header p {
 }
 
 /* --- 3: Deel en Win ------------------------------------------------------------------- */
-#shareAndWin {
+#win {
   position: absolute;
   width: 100%;
+  height: 600px;
   top: 1530px;
   background-color: #FFFFFF;
 }
 
-#shareAndWin header h1 {
+#win header h1 {
   position: absolute;
   width: 250px;
   top: 0px;
@@ -486,7 +529,7 @@ body > header p {
   color: #333333;
 }
 
-#shareAndWin h2 {
+#win h2 {
   position: absolute;
   width: 650px;
   top: 76px;
@@ -499,7 +542,7 @@ body > header p {
   color: #823F59;
 }
 
-#shareAndWin section {
+#win section {
   position: absolute;
   width: 980px;
   top: 160px;
@@ -507,7 +550,7 @@ body > header p {
   margin-left: -490px;
 }
 
-#shareAndWin section figure {
+#win section figure {
   position: relative;
   float: left;
   width: 300px;
@@ -516,7 +559,7 @@ body > header p {
   background-color: #823F59;
 }
 
-#shareAndWin section figure .image {
+#win section figure .image {
   position: absolute;
   width: 260px;
   height: 240px;
@@ -526,7 +569,7 @@ body > header p {
   z-index: 5;
 }
 
-#shareAndWin section figure img {
+#win section figure img {
   position: absolute;
   width: 50px;
   height: 50px;
@@ -536,7 +579,7 @@ body > header p {
   z-index: 10;
 }
 
-#shareAndWin section figure h3 {
+#win section figure h3 {
   position: absolute;
   width: 160px;
   top: 290px;
@@ -548,7 +591,7 @@ body > header p {
   color: #FFFFFF;
 }
 
-#shareAndWin section figure:last-child {
+#win section figure:last-child {
   margin-right: 0px;
 }
 

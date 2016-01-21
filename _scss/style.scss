@@ -42,12 +42,11 @@ div.burger{
     background-color: #FFFFFF;
     opacity: 1;
     transform: rotate(0deg);
-    transition: transform .4s, opacity .4s, top .4s, margin-top .4s;
+    transition: transform .4s, opacity .4s, top .4s;
   }
 
   .topBun{
     top: 0px;
-    margin-top: 0px;
   }
 
   .midBun{
@@ -63,9 +62,8 @@ div.burger{
 
 div.burger.open{
 
-  .topBun{
+  .topBun, .bottomBun{
     top: 50%;
-    margin-top: -1px;
     transform: rotate(45deg);
   }
 
@@ -75,32 +73,83 @@ div.burger.open{
 
   .bottomBun{
     top: 50%;
-    margin-top: -1px;
     transform: rotate(-45deg);
   }
 
 }
 
 nav {
+
   position: fixed;
   top: 0px;
   left: 0px;
   @include bgImgUrl('MenuToggleBg.svg');
   background-repeat: no-repeat;
-  transition: width .8s, height .8s, background-size .8s;
+  transition: width .7s, height .8s, background-size .7s;
+  overflow: hidden;
   z-index: 40;
+
+  ul{
+
+    position: absolute;
+    top: 50px;
+    left: 38px;
+
+    li{
+      position: relative;
+      margin-bottom: 20px;
+      list-style: none;
+      font-size: 2.2em;
+      font-weight: bold;
+      font-family: 'PT Sans', sans-serif;
+      text-transform: uppercase;
+      transition: margin-left .4s, opacity .8s;
+    }
+
+    li a{
+      padding-left: 5px;
+      text-decoration: none;
+      color: #FFFFFF;
+      transition: padding-left .3s, color .2s;
+    }
+
+  }
+
 }
 
 nav.closed {
+
   width: 60px;
   height: 60px;
   background-size: 60px 60px;
+
+  ul li{
+    margin-left: -380px;
+    opacity: 0;
+  }
+
 }
 
 nav.open {
-  width: 360px;
-  height: 114%;
-  background-size: 360px 114%;
+
+  width: 300px;
+  height: 140%;
+  background-size: 300px 140%;
+
+  ul li{
+    margin-left: 0px;
+    opacity: 1;
+  }
+
+  a:hover, a.active{
+    padding-left: 10px;
+    color: $pinkLight;
+  }
+
+  a.active{
+    border-left: 3px solid $pinkLight;
+  }
+
 }
 
 /* --- 1: Header ------------------------------------------------------------------- */
@@ -109,7 +158,7 @@ body > header {
 
   position: absolute;
   width: 100%;
-  height: 500px;
+  height: 760px;
 
   .headerBg {
     position: absolute;
@@ -220,10 +269,11 @@ body > header {
 
 /* --- 2: Ideaal Cadeau ------------------------------------------------------------------- */
 
-#idealPresent {
+#cadeaus {
 
   position: absolute;
   width: 100%;
+  height: 760px;
   top: 760px;
   background-color: #FFFFFF;
 
@@ -341,10 +391,11 @@ body > header {
 
 /* --- 3: Deel en Win ------------------------------------------------------------------- */
 
-#shareAndWin {
+#win {
 
   position: absolute;
   width: 100%;
+  height: 600px;
   top: 1530px;
   background-color: #FFFFFF;
 
