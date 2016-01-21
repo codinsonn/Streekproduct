@@ -109,7 +109,7 @@ html {
 }
 
 body {
-  height: 2000px;
+  height: 3000px;
   font-size: 1em;
   font-family: 'Helvetica neue', Helvetica, Arial, sans-serif;
 }
@@ -333,7 +333,7 @@ body > header p {
 #idealPresent p {
   position: absolute;
   width: 576px;
-  top: 410px;
+  top: 404px;
   left: 50%;
   margin-left: -288px;
   font-size: 1.6em;
@@ -351,12 +351,11 @@ body > header p {
 
 #idealPresent a {
   position: absolute;
-  width: 260px;
-  height: 50px;
-  top: 610px;
+  width: 250px;
+  top: 604px;
   left: 50%;
-  margin-left: -130px;
-  padding: 18px 0px 12px 0px;
+  margin-left: -125px;
+  padding: 15px 0px;
   border-radius: 14px;
   background-color: #FFFFFF;
   font-size: 1.6em;
@@ -369,6 +368,17 @@ body > header p {
   z-index: 20;
 }
 
+#idealPresent .raspberry {
+  position: absolute;
+  width: 143px;
+  height: 161px;
+  top: 520px;
+  left: 50%;
+  margin-left: -500px;
+  background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/Raspberry.png");
+  z-index: 20;
+}
+
 #idealPresent .petal3 {
   position: absolute;
   top: 580px;
@@ -377,6 +387,92 @@ body > header p {
 }
 
 /* --- 3: Deel en Win ------------------------------------------------------------------- */
+#shareAndWin {
+  position: absolute;
+  width: 100%;
+  top: 1530px;
+  background-color: #FFFFFF;
+}
+
+#shareAndWin header h1 {
+  position: absolute;
+  width: 250px;
+  top: 0px;
+  left: 50%;
+  margin-left: -125px;
+  font-size: 4.8em;
+  font-weight: bold;
+  font-family: 'pacifico', sans-serif;
+  text-align: center;
+  color: #333333;
+}
+
+#shareAndWin h2 {
+  position: absolute;
+  width: 650px;
+  top: 76px;
+  left: 50%;
+  margin-left: -325px;
+  font-size: 4.8em;
+  font-weight: bold;
+  font-family: 'PT Sans', sans-serif;
+  text-align: center;
+  color: #823F59;
+}
+
+#shareAndWin section {
+  position: absolute;
+  width: 980px;
+  top: 160px;
+  left: 50%;
+  margin-left: -490px;
+}
+
+#shareAndWin section figure {
+  position: relative;
+  float: left;
+  width: 300px;
+  height: 330px;
+  margin-right: 40px;
+  background-color: #823F59;
+}
+
+#shareAndWin section figure .image {
+  position: absolute;
+  width: 260px;
+  height: 240px;
+  top: 20px;
+  left: 20px;
+  background-color: #FFFFFF;
+  z-index: 5;
+}
+
+#shareAndWin section figure img {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 230px;
+  left: 50%;
+  margin-left: -25px;
+  z-index: 10;
+}
+
+#shareAndWin section figure h3 {
+  position: absolute;
+  width: 160px;
+  top: 290px;
+  left: 50%;
+  margin-left: -80px;
+  font-size: 1.8em;
+  font-family: 'pacifico', sans-serif;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+#shareAndWin section figure:last-child {
+  margin-right: 0px;
+}
+
 /* --- X: Footer ------------------------------------------------------------------- */
 /* --- Spritesheet ------------------------------------------------------------------- */
 .petal1 {
