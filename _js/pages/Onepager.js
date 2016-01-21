@@ -24,8 +24,7 @@ export default class Onepager{
 
   init(){
 
-    // Updates 'a.active' when refreshing once scrolling has taken place.
-    this.checkCurrentSection();
+
 
   }
 
@@ -57,6 +56,7 @@ export default class Onepager{
       let target = document.querySelector(`#${href.substr(1, href.length)}`);
 
       this.setActiveLinks(href);
+      history.pushState(this.stateObj, href, href);
 
       this.scrolling = true;
       animate(document.documentElement, 'scrollTop', '', getTopOffset(), target.offsetTop - 8, 600, true);

@@ -190,7 +190,8 @@
   },
 
   "globals": {
-    "$": true
+    "$": true,
+    "Phaser": true
   }
 
 }
