@@ -8,6 +8,7 @@ export default class Onepager{
 
     // -- Class Variables -------------
     this.scrolling = false;
+    this.stateObj = { hash: '#' };
 
     // -- Element Variables -----------
     this.$links = document.querySelectorAll('.menu a');
@@ -34,8 +35,9 @@ export default class Onepager{
       for(let i = 0; i < this.$pageSections.length; i++){
 
         let checkOffset = this.$pageSections[i].offsetTop + this.$pageSections[i].clientHeight - 140;
-        if(getTopOffset() >= this.$pageSections[i].offsetTop && getTopOffset() <= checkOffset){
+        if(getTopOffset() >= (this.$pageSections[i].offsetTop - 100) && getTopOffset() <= checkOffset){
           this.setActiveLinks(`#${this.$pageSections[i].getAttribute('id')}`);
+          history.pushState(this.stateObj, this.$pageSections[i].getAttribute('id'), `#${this.$pageSections[i].getAttribute('id')}`);
         }
 
       }
