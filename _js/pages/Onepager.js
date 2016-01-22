@@ -1,6 +1,6 @@
 'use strict';
 
-import {animate, getTopOffset} from '../helpers/util';
+import {animate, getTopOffset, checkSafari} from '../helpers/util';
 
 export default class Onepager{
 
@@ -23,8 +23,6 @@ export default class Onepager{
   }
 
   init(){
-
-
 
   }
 
@@ -49,7 +47,7 @@ export default class Onepager{
     let $link = e.currentTarget;
     let href = $link.getAttribute('href');
 
-    if(href.substr(0, 1) === '#'){
+    if(href.substr(0, 1) === '#' && checkSafari() === false){
 
       e.preventDefault();
 

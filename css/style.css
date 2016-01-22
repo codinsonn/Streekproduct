@@ -179,9 +179,23 @@ nav {
   z-index: 40;
 }
 
+nav a#logo {
+  position: absolute;
+  width: 130px;
+  height: 80px;
+  left: 44px;
+  background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/GeldhofLogo.png");
+  background-size: cover;
+  transition: opacity .4s, top .5s;
+}
+
+nav a#logo span {
+  display: none;
+}
+
 nav ul {
   position: absolute;
-  top: 50px;
+  top: 100px;
   left: 38px;
 }
 
@@ -209,6 +223,11 @@ nav.closed {
   background-size: 60px 60px;
 }
 
+nav.closed a#logo {
+  top: -200px;
+  opacity: 0;
+}
+
 nav.closed ul li {
   margin-left: -380px;
   opacity: 0;
@@ -220,17 +239,22 @@ nav.open {
   background-size: 300px 140%;
 }
 
+nav.open a#logo {
+  top: 0px;
+  opacity: 1;
+}
+
 nav.open ul li {
   margin-left: 0px;
   opacity: 1;
 }
 
-nav.open a:hover, nav.open a.active {
+nav.open li a:hover, nav.open li a.active {
   padding-left: 10px;
   color: #FFD0DA;
 }
 
-nav.open a.active {
+nav.open li a.active {
   border-left: 3px solid #FFD0DA;
 }
 
@@ -446,7 +470,7 @@ body > header p {
   width: 100%;
   height: 628px;
   top: 142px;
-  background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/CadeauBg.png");
+  background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/CadeauBg.svg");
   background-size: 100% 628px;
   z-index: 5;
 }
@@ -531,10 +555,10 @@ body > header p {
 
 #win h2 {
   position: absolute;
-  width: 650px;
+  width: 800px;
   top: 76px;
   left: 50%;
-  margin-left: -325px;
+  margin-left: -400px;
   font-size: 4.8em;
   font-weight: bold;
   font-family: 'PT Sans', sans-serif;

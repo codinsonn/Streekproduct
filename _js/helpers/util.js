@@ -21,6 +21,13 @@ export const html = (strings, ...values) => {
 
 };
 
+export const checkSafari = () => {
+
+  let isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+  return isSafari;
+
+};
+
 export const prepend = ($parent, $element) => {
 
   let $first = $parent.children[0];
