@@ -24,6 +24,10 @@ body {
   font-family: 'Helvetica neue', Helvetica, Arial, sans-serif;
 }
 
+body.game {
+  height: 100%;
+}
+
 /* --- Navigation ------------------------------------------------------------------ */
 
 div.burger{
