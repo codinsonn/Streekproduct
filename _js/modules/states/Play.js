@@ -23,8 +23,6 @@ export default class Play extends Phaser.State {
     this.player = new Player(this.game, 400, this.game.height - 137);
     this.game.add.existing(this.player);
 
-    this.input.onDown.add(() => this.throwCuberdon('high'));
-
     this.cursors.up.onDown.add(() => this.throwCuberdon('high'));
     this.cursors.down.onDown.add(() => this.throwCuberdon('low'));
 
@@ -40,11 +38,12 @@ export default class Play extends Phaser.State {
 
         this.cuberdons[i].setGrounded();
 
-      }else if(this.cuberdons[i].getSplattered() === false && this.cuberdons[i].getGrounded() === true && this.cuberdons[i].body.position.x < this.player.x + 40){
+      }else if(this.cuberdons[i].getSplattered() === false && this.cuberdons[i].getGrounded() === true && this.cuberdons[i].body.position.x < this.player.x + 37){
 
+        this.player.damageCart();
         this.cuberdons[i].setSplattered();
 
-      }else if(this.cuberdons[i].getSplattered() === true && this.cuberdons[i].body.position.x < 0){
+      }else if(this.cuberdons[i].getSplattered() === true && this.cuberdons[i].body.position.x < -200){
 
         this.cuberdons[i].destroy();
         this.cuberdons.splice(i, 1);

@@ -1,6 +1,6 @@
 'use strict';
 
-let MIN_VELOCITY = -193;
+let MIN_VELOCITY = -194;
 
 export default class Cuberdon extends Phaser.Sprite {
 
@@ -31,7 +31,7 @@ export default class Cuberdon extends Phaser.Sprite {
     }
 
     if(this.grounded === true && this.body.velocity.x >= MIN_VELOCITY){
-      this.body.velocity.x += -12;
+      this.body.velocity.x += -20;
     }
 
   }
@@ -61,7 +61,7 @@ export default class Cuberdon extends Phaser.Sprite {
     this.splattered = true;
 
     this.angle = 90;
-    this.body.velocity.y += -30;
+    this.body.velocity.y += -20;
     this.anchor.setTo(1, 1);
     this.scale.setTo(-.3, 4.8);
 

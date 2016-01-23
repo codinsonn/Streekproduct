@@ -51,7 +51,7 @@ const toggleMenu = () => {
   if($burger.className === 'burger closed'){
     $burger.className = 'burger open';
     $menu.className = 'menu open';
-  }else{
+  }else if(document.querySelector('.active').getAttribute('href') !== 'game.html'){
     $burger.className = 'burger closed';
     $menu.className = 'menu closed';
   }
