@@ -10,7 +10,7 @@ export default class Player extends Phaser.Sprite {
 
     this.anchor.setTo(0.5, 0.5);
     this.animations.add('drive');
-    this.animations.play('drive', 7, true);
+    this.animations.play('drive', 16, true);
 
     //this.game.physics.arcade.enableBody(this);
 

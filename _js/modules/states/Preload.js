@@ -15,7 +15,7 @@ export default class Preload extends Phaser.State {
     this.load.bitmapFont('pacifico', 'assets/fonts/pacificoregular/Pacifico.png', 'assets/fonts/pacificoregular/Pacifico.fnt');
     this.load.bitmapFont('ptsans', 'assets/fonts/ptsansbold/ptsansbold.png', 'assets/fonts/ptsansbold/ptsansbold.fnt');
 
-    this.load.spritesheet('player', 'assets/img/game/PlayerSprite.png', 240, 180, 5);
+    this.load.spritesheet('player', 'assets/img/game/CharacterAnim.png', 240, 180, 12);
 
   }
 
