@@ -40,6 +40,11 @@ export default class Player extends Phaser.Sprite {
       this.$healthbar.style.opacity = this.$healthbar.style.opacity - 0.01;
     }
 
+    //Animate death animation
+    if(this.health <= 0){
+      this.x += -3;
+    }
+
   }
 
   damageCart() {
@@ -85,9 +90,13 @@ export default class Player extends Phaser.Sprite {
 
     this.health = 0;
     this.updateHealthbar();
-    this.playSlipAnimation();
 
-    this.game.add.tween(this).to({x: 40, y: this.y+12}, 1000).start();
+    this.game.add.tween(this).to({angle: 40}, 1000).start();
+
+    this.game.physics.arcade.enableBody(this);
+    this.body.gravity.y = 2000;
+    //this.body.velocity.y = 0;
+    this.body.velocity.x = 100;
 
   }
 
