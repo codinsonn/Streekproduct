@@ -40,7 +40,12 @@ export default class Play extends Phaser.State {
 
       }else if(this.cuberdons[i].getSplattered() === false && this.cuberdons[i].getGrounded() === true && this.cuberdons[i].body.position.x < this.player.x + 37){
 
-        this.player.damageCart();
+        if(this.player.getHealth() > 8){
+          this.player.damageCart();
+        }else{
+          this.player.playDeathAnimation();
+        }
+
         this.cuberdons[i].setSplattered();
 
       }else if(this.cuberdons[i].getSplattered() === true && this.cuberdons[i].body.position.x < -200){

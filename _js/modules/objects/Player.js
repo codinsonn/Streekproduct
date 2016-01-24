@@ -45,10 +45,19 @@ export default class Player extends Phaser.Sprite {
   damageCart() {
 
     this.health += -8;
+    this.updateHealthbar();
+    this.playSlipAnimation();
+
+  }
+
+  getHealth() {
+    return this.health;
+  }
+
+  updateHealthbar() {
+
     this.$healthbar.style.opacity = 1;
     this.$health.style.width = `${this.health}%`;
-
-    this.playSlipAnimation();
 
   }
 
@@ -69,6 +78,16 @@ export default class Player extends Phaser.Sprite {
       }, 800);
 
     }
+
+  }
+
+  playDeathAnimation() {
+
+    this.health = 0;
+    this.updateHealthbar();
+    this.playSlipAnimation();
+
+    this.game.add.tween(this).to({x: 40, y: this.y+12}, 1000).start();
 
   }
 
