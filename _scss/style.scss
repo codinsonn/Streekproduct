@@ -525,7 +525,7 @@ body > header {
     border-radius: 5px;
     overflow: hidden;
     opacity: 0;
-    z-index: 5;
+    z-index: 25;
   }
 
   .remainingHealth{
@@ -537,6 +537,48 @@ body > header {
     background-color: $purpleMain;
   }
 
+  .next, .prev{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    margin-top: -15px;
+    border: none;
+    outline: none;
+    @include bgImgUrl('game/Arrow.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $purpleMain;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 1.5em;
+    color: #FFF;
+    z-index: 30;
+  }
+
+  .next{
+    right: 0px;
+    text-align: right;
+    transform: rotate(180deg);
+  }
+
+  .prev{
+    left: 0px;
+    text-align: left;
+  }
+
+}
+
+.show{ opacity: 1; }
+.hide{ opacity: 0; }
+
+#lightbox{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(122, 122, 122, .8);
+  z-index: 10;
 }
 
 #pauseScreen{
@@ -595,14 +637,6 @@ body > header {
 
 }
 
-#pauseScreen.show{
-  opacity: 1;
-}
-
-#pauseScreen.hide{
-  opacity: 0;
-}
-
 #infoWrapper{
 
   position: absolute;
@@ -622,36 +656,9 @@ body > header {
     img{
       position: absolute;
       width: 100%;
-      height: 240px;
+      height: 300px;
       top: 0px;
       left: 0px;
-    }
-
-    h2{
-      position: absolute;
-      width: 170px;
-      height: 30px;
-      top: 100px;
-      left: 0px;
-      font-weight: bold;
-      font-size: 1.8em;
-      font-family: 'Helvetica', sans-serif;
-      color: #333333;
-    }
-
-    p{
-      position: absolute;
-      height: 60px;
-      top: 240px;
-      left: 0px;
-      padding: 14px;
-      background-color: #54B52D;
-      font-weight: bold;
-      font-size: 1.3em;
-      font-family: 'Helvetica', sans-serif;
-      line-height: 16px;
-      text-align: justify;
-      color: #FFFFFF;
     }
 
   }

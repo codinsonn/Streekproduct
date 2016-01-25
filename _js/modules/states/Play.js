@@ -22,7 +22,8 @@ export default class Play extends Phaser.State {
     this.game.physics.arcade.gravity.y = 1200;
 
     this.$pauseScreen = document.querySelector('#pauseScreen');
-    this.$infoSection = document.querySelector('#infoWrapper');
+    this.$lightbox = document.querySelector('#lightbox');
+    this.$lightbox.addEventListener('click', () => this.togglePause());
 
     this.cursors = this.game.input.keyboard.createCursorKeys();
     this.pauseKey = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
@@ -49,9 +50,12 @@ export default class Play extends Phaser.State {
     if(this.game.paused){
       this.game.paused = false;
       this.$pauseScreen.className = 'hide';
+      this.$lightbox.className = 'hide';
+      document.querySelector('#pauseScreen footer h3').innerHTML = 'Druk op \'Spatie\' om verder te spelen';
     }else{
       this.game.paused = true;
       this.$pauseScreen.className = 'show';
+      this.$lightbox.className = 'show';
     }
 
   }
