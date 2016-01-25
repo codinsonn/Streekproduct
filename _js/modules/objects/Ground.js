@@ -14,4 +14,8 @@ export default class Ground extends Phaser.TileSprite {
 
   }
 
+  stopAutoScroll(){
+    this.autoScroll(0, 0);
+  }
+
 }

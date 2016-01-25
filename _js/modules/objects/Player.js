@@ -13,6 +13,7 @@ export default class Player extends Phaser.Sprite {
 
     this.health = 100;
     this.animating = false;
+    this.gameWon = false;
 
     this.$healthbar = document.querySelector('.healthbar');
     this.$health = document.querySelector('.remainingHealth');
@@ -24,6 +25,11 @@ export default class Player extends Phaser.Sprite {
   }
 
   update() {
+
+    //Animate Victory Drive!
+    if(this.gameWon === true){
+      this.x += 4;
+    }
 
     //Make the player go left
     if(this.cursors.left.isDown && this.x >= MIN_POS){
@@ -53,6 +59,10 @@ export default class Player extends Phaser.Sprite {
     this.updateHealthbar();
     this.playSlipAnimation();
 
+  }
+
+  setGameWon() {
+    this.gameWon = true;
   }
 
   getHealth() {

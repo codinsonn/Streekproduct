@@ -622,6 +622,12 @@ body > header p {
 /* --- X: Game ---------------------------------------------------------------------- */
 .game {
   height: 100%;
+  background: #e2f5ff;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #e2f5ff 0%, #f4fbff 72%, #efe6e1 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .game .healthbar {
@@ -692,7 +698,8 @@ body > header p {
   height: 100%;
   top: 0px;
   left: 0px;
-  background-color: rgba(122, 122, 122, 0.8);
+  background-color: rgba(200, 200, 200, 0.6);
+  transition: opacity .5s;
   z-index: 10;
 }
 
@@ -708,13 +715,14 @@ body > header p {
   background-color: #FFFFFF;
   box-shadow: 0 0 2px 0px rgba(66, 66, 66, 0.4);
   overflow: hidden;
+  transition: opacity .4s;
   z-index: 20;
 }
 
 #pauseScreen header {
   position: absolute;
   width: 100%;
-  height: 45px;
+  height: 47px;
   top: 0px;
   left: 0px;
   text-align: center;
@@ -722,7 +730,7 @@ body > header p {
 }
 
 #pauseScreen header h1 {
-  margin-top: 8px;
+  margin-top: 10px;
   font-size: 2.3em;
   font-family: 'Pacifico', sans-serif;
   text-shadow: 0 0 0 transparent, -1px -1px 0 #FFFFFF, 0px -1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, -1px 0px 0 #FFFFFF, 0px 0px 0 #FFFFFF, 1px 0px 0 #FFFFFF, -1px 1px 0 #FFFFFF, 0px 1px 0 #FFFFFF, 1px 1px 0 #FFFFFF, -2px -2px 0 #FFFFFF, -1px -2px 0 #FFFFFF, 0px -2px 0 #FFFFFF, 1px -2px 0 #FFFFFF, 2px -2px 0 #FFFFFF, -2px -1px 0 #FFFFFF, -1px -1px 0 #FFFFFF, 0px -1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, 2px -1px 0 #FFFFFF, -2px 0px 0 #FFFFFF, -1px 0px 0 #FFFFFF, 0px 0px 0 #FFFFFF, 1px 0px 0 #FFFFFF, 2px 0px 0 #FFFFFF, -2px 1px 0 #FFFFFF, -1px 1px 0 #FFFFFF, 0px 1px 0 #FFFFFF, 1px 1px 0 #FFFFFF, 2px 1px 0 #FFFFFF, -2px 2px 0 #FFFFFF, -1px 2px 0 #FFFFFF, 0px 2px 0 #FFFFFF, 1px 2px 0 #FFFFFF, 2px 2px 0 #FFFFFF;
@@ -732,7 +740,7 @@ body > header p {
 #pauseScreen footer {
   position: absolute;
   width: 100%;
-  height: 45px;
+  height: 47px;
   bottom: 0px;
   left: 0px;
   text-align: center;
@@ -740,7 +748,7 @@ body > header p {
 }
 
 #pauseScreen footer h3 {
-  margin-top: 14px;
+  margin-top: 16px;
   font-size: 1.3em;
   font-family: 'Helvetica', sans-serif;
   color: #FFF;
@@ -768,6 +776,10 @@ body > header p {
   height: 300px;
   top: 0px;
   left: 0px;
+}
+
+#infoWrapper section h2, #infoWrapper section p {
+  display: none;
 }
 
 #infoWrapper.showInfo1 {

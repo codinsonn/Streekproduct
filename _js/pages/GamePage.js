@@ -11,7 +11,7 @@ export default class GamePage{
   constructor(){
 
     // -- Class Variables -------------
-    this.game = new Phaser.Game(window.innerWidth, window.innerHeight, Phaser.AUTO);
+    this.game = new Phaser.Game(window.innerWidth, window.innerHeight, Phaser.AUTO, '', null, true);
     this.infoIndex = 0;
 
     // -- Element Variables -------------

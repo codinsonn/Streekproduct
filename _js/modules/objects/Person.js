@@ -44,4 +44,8 @@ export default class Person extends Phaser.Sprite {
 
   }
 
+  getHasScored(){
+    return this.hasScored;
+  }
+
 }

@@ -513,6 +513,10 @@ body > header {
 .game{
 
   height: 100%;
+  background: #e2f5ff; /* Old browsers */
+  background: -moz-linear-gradient(top, #e2f5ff 0%, #f4fbff 72%, #efe6e1 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #e2f5ff 0%,#f4fbff 72%,#efe6e1 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #e2f5ff 0%,#f4fbff 72%,#efe6e1 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 
   .healthbar{
     position: fixed;
@@ -546,6 +550,7 @@ body > header {
     border: none;
     outline: none;
     @include bgImgUrl('game/Arrow.png');
+    //@include bgImgUrl('game/CuberdonArrow.png');
     background-repeat: no-repeat;
     background-position: center;
     background-color: $purpleMain;
@@ -559,11 +564,13 @@ body > header {
     right: 0px;
     text-align: right;
     transform: rotate(180deg);
+    //transform: rotate(90deg);
   }
 
   .prev{
     left: 0px;
     text-align: left;
+    //transform: rotate(-90deg);
   }
 
 }
@@ -577,7 +584,8 @@ body > header {
   height: 100%;
   top: 0px;
   left: 0px;
-  background-color: rgba(122, 122, 122, .8);
+  background-color: rgba(200, 200, 200, .6);
+  transition: opacity .5s;
   z-index: 10;
 }
 
@@ -594,20 +602,21 @@ body > header {
   background-color: #FFFFFF;
   box-shadow: 0 0 2px 0px rgba(66, 66, 66, .4);
   overflow: hidden;
+  transition: opacity .4s;
   z-index: 20;
 
   header{
 
     position: absolute;
     width: 100%;
-    height: 45px;
+    height: 47px;
     top: 0px;
     left: 0px;
     text-align: center;
     background-color: #AE2F61;
 
     h1{
-      margin-top: 8px;
+      margin-top: 10px;
       font-size: 2.3em;
       font-family: 'Pacifico', sans-serif;
       @include stroke(2px, #FFFFFF);
@@ -620,14 +629,14 @@ body > header {
 
     position: absolute;
     width: 100%;
-    height: 45px;
+    height: 47px;
     bottom: 0px;
     left: 0px;
     text-align: center;
     background-color: #AE2F61;
 
     h3{
-      margin-top: 14px;
+      margin-top: 16px;
       font-size: 1.3em;
       font-family: 'Helvetica', sans-serif;
       color: #FFF;
@@ -659,6 +668,10 @@ body > header {
       height: 300px;
       top: 0px;
       left: 0px;
+    }
+
+    h2, p{
+      display: none;
     }
 
   }
