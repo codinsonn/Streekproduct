@@ -17,9 +17,12 @@ export default class Play extends Phaser.State {
     this.cuberdons = this.game.add.group();
     this.people = this.game.add.group();
 
-    this.game.stage.backgroundColor = '#FFFFFF';
+    this.game.stage.backgroundColor = '#F2F2F2';
     this.game.physics.startSystem(Phaser.Physics.ARCADE);
     this.game.physics.arcade.gravity.y = 1200;
+
+    this.$pauseScreen = document.querySelector('#pauseScreen');
+    this.$infoSection = document.querySelector('#infoWrapper');
 
     this.cursors = this.game.input.keyboard.createCursorKeys();
     this.pauseKey = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
@@ -45,8 +48,10 @@ export default class Play extends Phaser.State {
 
     if(this.game.paused){
       this.game.paused = false;
+      this.$pauseScreen.className = 'hide';
     }else{
       this.game.paused = true;
+      this.$pauseScreen.className = 'show';
     }
 
   }
@@ -144,11 +149,15 @@ export default class Play extends Phaser.State {
 
   throwCuberdon(highOrLow){
 
-    let cuberdon = new Cuberdon(this.game, this.player.x - 60, this.player.y - 70);
-    this.cuberdons.add(cuberdon);
-    cuberdon.throw(highOrLow);
+    if(!this.game.paused){
 
-    if(this.player.getHealth() > 8){ this.player.bringToTop(); }
+      let cuberdon = new Cuberdon(this.game, this.player.x - 60, this.player.y - 70);
+      this.cuberdons.add(cuberdon);
+      cuberdon.throw(highOrLow);
+
+      if(this.player.getHealth() > 8){ this.player.bringToTop(); }
+
+    }
 
   }
 
