@@ -36,27 +36,31 @@ export default class Cuberdon extends Phaser.Sprite {
 
   }
 
-  getGrounded() {
+  getGrounded(){
     return this.grounded;
   }
 
-  setGrounded() {
+  checkGrounded(){
 
-    this.grounded = true;
+    if(this.grounded === false && this.body.wasTouching.down){
 
-    if(this.highOrLow === 'high'){
-      this.body.velocity.x = 300;
-    }else if(this.highOrLow === 'low'){
-      this.body.velocity.x = 200;
+      this.grounded = true;
+
+      if(this.highOrLow === 'high'){
+        this.body.velocity.x = 300;
+      }else if(this.highOrLow === 'low'){
+        this.body.velocity.x = 200;
+      }
+
     }
 
   }
 
-  getSplattered() {
+  getSplattered(){
     return this.splattered;
   }
 
-  setSplattered() {
+  setSplattered(){
 
     this.splattered = true;
 
@@ -67,7 +71,7 @@ export default class Cuberdon extends Phaser.Sprite {
 
   }
 
-  throw(highOrLow) {
+  throw(highOrLow){
 
     this.highOrLow = highOrLow;
 

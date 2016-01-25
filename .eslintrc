@@ -115,7 +115,7 @@
     "array-bracket-spacing": [1, "never"],
     "accessor-pairs": 0,
     "block-scoped-var": 0,
-    "brace-style": [1, "1tbs"],
+    "brace-style": [0, "1tbs"],
     "camelcase": [1, {"properties": "always"}],
     "comma-dangle": [1, "never"],
     "comma-spacing": [1, {"before": false, "after": true}],

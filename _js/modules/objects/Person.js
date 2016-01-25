@@ -12,13 +12,13 @@ export default class Person extends Phaser.Sprite {
 
   }
 
-  reset(x, y, velocity){
+  reset(x, y, velocity, hasScored){
 
     this.body.velocity.x = velocity;
     this.x = x;
     this.y = y;
     this.exists = true;
-    this.hasScored = false;
+    this.hasScored = hasScored;
     this.passedBy = false;
 
   }
@@ -37,16 +37,11 @@ export default class Person extends Phaser.Sprite {
   }
 
   setPassedBy(){
+
+    this.checkWorldBounds = true;
+    this.outOfBoundsKill = true;
     this.passedBy = true;
-  }
 
-  /*getScored(){
-    return this.hasScored;
   }
-
-  setScored(){
-    this.body.immovable = true;
-    this.setScored = true;
-  }*/
 
 }

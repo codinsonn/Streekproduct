@@ -3,14 +3,17 @@
 import Player from '../objects/Player';
 import Ground from '../objects/Ground';
 import Cuberdon from '../objects/Cuberdon';
-//import PeopleGroup from '../objects/PeopleGroup';
 import Person from '../objects/Person';
+import Heart from '../objects/Heart';
 
 export default class Play extends Phaser.State {
 
   create() {
 
-    this.score = 0;
+    this.hits = 0;
+    this.passed = 0;
+    this.customers = 0;
+
     this.cuberdons = this.game.add.group();
     this.people = this.game.add.group();
 
@@ -19,6 +22,7 @@ export default class Play extends Phaser.State {
     this.game.physics.arcade.gravity.y = 1200;
 
     this.cursors = this.game.input.keyboard.createCursorKeys();
+    this.pauseKey = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
 
     this.ground = new Ground(this.game, 0, this.game.height - 40, this.game.width + 600, this.game.height);
     this.game.add.existing(this.ground);
@@ -28,9 +32,22 @@ export default class Play extends Phaser.State {
 
     this.cursors.up.onDown.add(() => this.throwCuberdon('high'));
     this.cursors.down.onDown.add(() => this.throwCuberdon('low'));
+    this.pauseKey.onDown.add(() => this.togglePause());
 
     this.personGenerator = this.game.time.events.loop(Phaser.Timer.SECOND * 2, this.generatePerson, this);
     this.personGenerator.timer.start();
+
+    this.game.paused = true;
+
+  }
+
+  togglePause() {
+
+    if(this.game.paused){
+      this.game.paused = false;
+    }else{
+      this.game.paused = true;
+    }
 
   }
 
@@ -47,11 +64,7 @@ export default class Play extends Phaser.State {
 
       this.game.physics.arcade.collide(cuberdon, this.ground);
 
-      if(cuberdon.getGrounded() === false && cuberdon.body.wasTouching.down){
-
-        cuberdon.setGrounded();
-
-      }
+      cuberdon.checkGrounded();
 
       if(cuberdon.getSplattered() === false && cuberdon.getGrounded() === true && cuberdon.body.position.x < this.player.x + 37){
 
@@ -60,6 +73,8 @@ export default class Play extends Phaser.State {
           cuberdon.setSplattered();
         }else{
           this.player.playDeathAnimation();
+          this.ground.bringToTop();
+          setTimeout(() => { this.game.paused = true; }, 400);
         }
 
       }
@@ -106,10 +121,11 @@ export default class Play extends Phaser.State {
 
   personHitHandler(person, cuberdon){
 
-    person.destroy();
     cuberdon.destroy();
+    person.reset(person.x, person.y-8, -200, true);
 
-
+    let heart = new Heart(this.game, person.x, person.y - 100);
+    this.game.add.existing(heart);
 
   }
 
@@ -118,11 +134,11 @@ export default class Play extends Phaser.State {
     let personX = this.game.rnd.integerInRange(this.game.width + 80, this.game.width + 340);
     let personY = this.game.height - 120;
     let personFrame = this.game.rnd.integerInRange(1, 4);
-    let personVelocity = this.game.rnd.integerInRange(-240, -160);
+    let personVelocity = this.game.rnd.integerInRange(-230, -170);
 
     let person = new Person(this.game, personX, personY, personFrame);
     this.people.add(person, true);
-    person.reset(personX, personY, personVelocity);
+    person.reset(personX, personY, personVelocity, false);
 
   }
 
@@ -132,7 +148,7 @@ export default class Play extends Phaser.State {
     this.cuberdons.add(cuberdon);
     cuberdon.throw(highOrLow);
 
-    this.player.bringToTop();
+    if(this.player.getHealth() > 8){ this.player.bringToTop(); }
 
   }
 
