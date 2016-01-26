@@ -109,7 +109,6 @@ html {
 }
 
 body {
-  height: 3000px;
   font-size: 1em;
   font-family: 'Helvetica neue', Helvetica, Arial, sans-serif;
 }
@@ -536,7 +535,7 @@ body > header p {
   position: absolute;
   width: 100%;
   height: 600px;
-  top: 1530px;
+  top: 1580px;
   background-color: #FFFFFF;
 }
 
@@ -583,7 +582,7 @@ body > header p {
   background-color: #823F59;
 }
 
-#win section figure .image {
+#win section figure img.image {
   position: absolute;
   width: 260px;
   height: 240px;
@@ -593,7 +592,7 @@ body > header p {
   z-index: 5;
 }
 
-#win section figure img {
+#win section figure img.icon {
   position: absolute;
   width: 50px;
   height: 50px;
@@ -619,13 +618,188 @@ body > header p {
   margin-right: 0px;
 }
 
+#win p {
+  position: absolute;
+  width: 710px;
+  top: 530px;
+  left: 50%;
+  margin-left: -355px;
+  font-size: 1.6em;
+  font-weight: bold;
+  font-family: 'PT Sans', sans-serif;
+  line-height: 1.5em;
+  text-align: justify;
+  -moz-text-align-last: center;
+  text-align-last: center;
+  color: #333;
+  z-index: 20;
+}
+
+#win p span {
+  color: #823F59;
+}
+
+/* --- 4: Geliefd Streekproduct ------------------------------------------------------------------- */
+#streek {
+  position: absolute;
+  width: 100%;
+  height: 760px;
+  top: 2200px;
+  background-color: #FFFFFF;
+}
+
+#streek header h1 {
+  position: absolute;
+  width: 500px;
+  top: 195px;
+  left: 50%;
+  margin-left: -250px;
+  font-size: 5.6em;
+  font-family: 'pacifico';
+  text-align: center;
+  color: #823F59;
+  text-shadow: 0 0 0 transparent, -1px -1px 0 #FFFFFF, 0px -1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, -1px 0px 0 #FFFFFF, 0px 0px 0 #FFFFFF, 1px 0px 0 #FFFFFF, -1px 1px 0 #FFFFFF, 0px 1px 0 #FFFFFF, 1px 1px 0 #FFFFFF, -2px -2px 0 #FFFFFF, -1px -2px 0 #FFFFFF, 0px -2px 0 #FFFFFF, 1px -2px 0 #FFFFFF, 2px -2px 0 #FFFFFF, -2px -1px 0 #FFFFFF, -1px -1px 0 #FFFFFF, 0px -1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, 2px -1px 0 #FFFFFF, -2px 0px 0 #FFFFFF, -1px 0px 0 #FFFFFF, 0px 0px 0 #FFFFFF, 1px 0px 0 #FFFFFF, 2px 0px 0 #FFFFFF, -2px 1px 0 #FFFFFF, -1px 1px 0 #FFFFFF, 0px 1px 0 #FFFFFF, 1px 1px 0 #FFFFFF, 2px 1px 0 #FFFFFF, -2px 2px 0 #FFFFFF, -1px 2px 0 #FFFFFF, 0px 2px 0 #FFFFFF, 1px 2px 0 #FFFFFF, 2px 2px 0 #FFFFFF, -3px -3px 0 #FFFFFF, -2px -3px 0 #FFFFFF, -1px -3px 0 #FFFFFF, 0px -3px 0 #FFFFFF, 1px -3px 0 #FFFFFF, 2px -3px 0 #FFFFFF, 3px -3px 0 #FFFFFF, -3px -2px 0 #FFFFFF, -2px -2px 0 #FFFFFF, -1px -2px 0 #FFFFFF, 0px -2px 0 #FFFFFF, 1px -2px 0 #FFFFFF, 2px -2px 0 #FFFFFF, 3px -2px 0 #FFFFFF, -3px -1px 0 #FFFFFF, -2px -1px 0 #FFFFFF, -1px -1px 0 #FFFFFF, 0px -1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, 2px -1px 0 #FFFFFF, 3px -1px 0 #FFFFFF, -3px 0px 0 #FFFFFF, -2px 0px 0 #FFFFFF, -1px 0px 0 #FFFFFF, 0px 0px 0 #FFFFFF, 1px 0px 0 #FFFFFF, 2px 0px 0 #FFFFFF, 3px 0px 0 #FFFFFF, -3px 1px 0 #FFFFFF, -2px 1px 0 #FFFFFF, -1px 1px 0 #FFFFFF, 0px 1px 0 #FFFFFF, 1px 1px 0 #FFFFFF, 2px 1px 0 #FFFFFF, 3px 1px 0 #FFFFFF, -3px 2px 0 #FFFFFF, -2px 2px 0 #FFFFFF, -1px 2px 0 #FFFFFF, 0px 2px 0 #FFFFFF, 1px 2px 0 #FFFFFF, 2px 2px 0 #FFFFFF, 3px 2px 0 #FFFFFF, -3px 3px 0 #FFFFFF, -2px 3px 0 #FFFFFF, -1px 3px 0 #FFFFFF, 0px 3px 0 #FFFFFF, 1px 3px 0 #FFFFFF, 2px 3px 0 #FFFFFF, 3px 3px 0 #FFFFFF;
+  z-index: 20;
+}
+
+#streek .coupleIllustration {
+  position: absolute;
+  width: 116px;
+  height: 160px;
+  top: 70px;
+  left: 50%;
+  margin-left: -58px;
+  background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/CoupleIllustration.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 5;
+}
+
+#streek .cityDecorLeft {
+  position: absolute;
+  width: 358px;
+  height: 170px;
+  top: 50px;
+  left: 0px;
+  background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/CityDecorLeft.png");
+  z-index: 0;
+}
+
+#streek .cityDecorRight {
+  position: absolute;
+  width: 434px;
+  height: 325px;
+  top: 0px;
+  right: 0px;
+  background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/CityDecorRight.png");
+  z-index: 0;
+}
+
+#streek .streekBg {
+  position: absolute;
+  width: 100%;
+  height: 628px;
+  top: 160px;
+  background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/CadeauBg.svg");
+  background-size: 100% 628px;
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  transform: scaleX(-1);
+  z-index: 5;
+}
+
+#streek .bgPurple {
+  position: absolute;
+  width: 100%;
+  height: 360px;
+  top: 450px;
+  background-color: #823F59;
+  z-index: 0;
+}
+
+#streek p {
+  position: absolute;
+  width: 716px;
+  top: 300px;
+  left: 50%;
+  margin-left: -358px;
+  font-size: 1.6em;
+  font-weight: bold;
+  font-family: 'PT Sans', sans-serif;
+  line-height: 1.5em;
+  text-align: justify;
+  color: #FFF;
+  z-index: 20;
+}
+
+#streek p span {
+  color: #FFD0DA;
+}
+
+#streek .bgWhite {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  top: 570px;
+  background-color: #FFF;
+  z-index: 20;
+}
+
+#streek .streekProductLabel {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: 550px;
+  left: 50%;
+  margin-left: -75px;
+  background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/streekProductLabel.png");
+  background-size: contain;
+  z-index: 30;
+}
+
+#streek .neuzekesKar {
+  position: absolute;
+  width: 240px;
+  height: 180px;
+  top: 500px;
+  left: 17%;
+  background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/NeuzekesFietsKar.png");
+  background-size: contain;
+  background-repeat: none;
+  z-index: 30;
+}
+
+#streek .playGame {
+  position: absolute;
+  top: 580px;
+  left: 50%;
+  margin-left: 140px;
+  font-size: 1.7em;
+  font-weight: bold;
+  font-family: 'PT Sans', sans-serif;
+  line-height: 2em;
+  color: #823F59;
+  z-index: 35;
+}
+
+#streek .playGame a {
+  margin-top: 8px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  background-color: #823F59;
+  font-size: .9em;
+  text-decoration: none;
+  color: #FFF;
+}
+
 /* --- X: Game ---------------------------------------------------------------------- */
 .game {
   height: 100%;
   background: #e2f5ff;
   /* Old browsers */
   /* FF3.6-15 */
-  /* Chrome10-25,Safari5.1-6 */
+  /* Chrome10-25, Safari5.1-6 */
   background: linear-gradient(to bottom, #e2f5ff 0%, #f4fbff 72%, #efe6e1 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
@@ -921,13 +1095,6 @@ body > header p {
   background-color: #77AE62;
 }
 
-/*#scoreScreen.won > header{
-  background-color: #77AE62;
-}
-
-#scoreScreen.lost > header{
-  background-color: #B02C61;
-}*/
 /* --- X: Footer --------------------------------------------------------------------- */
 /* --- Spritesheet ------------------------------------------------------------------- */
 .petal1 {

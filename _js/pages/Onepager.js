@@ -52,12 +52,13 @@ export default class Onepager{
       e.preventDefault();
 
       let target = document.querySelector(`#${href.substr(1, href.length)}`);
+      let targetScroll = target.getAttribute('data-scroll-info');
 
       this.setActiveLinks(href);
       history.pushState(this.stateObj, href, href);
 
       this.scrolling = true;
-      animate(document.documentElement, 'scrollTop', '', getTopOffset(), target.offsetTop - 8, 600, true);
+      animate(document.documentElement, 'scrollTop', '', getTopOffset(), targetScroll, 600, true);
       setTimeout(() => {
         this.scrolling = false;
       }, 580);

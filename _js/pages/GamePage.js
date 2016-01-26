@@ -22,6 +22,7 @@ export default class GamePage{
     // -- Event Listeners -------------
     this.$btnNext.addEventListener('click', () => this.scrollToInfo(1));
     this.$btnPrev.addEventListener('click', () => this.scrollToInfo(-1));
+    window.addEventListener('keydown', (e) => this.checkPaused(e));
 
   }
 
@@ -31,6 +32,21 @@ export default class GamePage{
     this.game.state.add('Preload', Preload, false);
     this.game.state.add('Play', Play, false);
     this.game.state.start('Boot');
+
+  }
+
+  checkPaused(e){
+
+    let key = e.which || e.keyCode;
+
+    if(key === 32){
+
+      setTimeout(() => {
+        this.infoIndex = 1;
+        this.scrollToInfo(0);
+      }, 400);
+
+    }
 
   }
 

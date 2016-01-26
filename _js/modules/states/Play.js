@@ -51,7 +51,6 @@ export default class Play extends Phaser.State {
 
     this.gameOver = false;
     this.togglePause();
-    //this.gameLost();
 
   }
 
@@ -133,6 +132,7 @@ export default class Play extends Phaser.State {
 
     this.$scoreScreen.className = 'lost show';
     this.game.paused = true;
+    this.gameOver = true;
 
   }
 
@@ -149,6 +149,7 @@ export default class Play extends Phaser.State {
 
     this.$scoreScreen.className = 'won show';
     this.game.paused = true;
+    this.gameOver = true;
 
   }
 

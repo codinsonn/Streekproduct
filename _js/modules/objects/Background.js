@@ -35,12 +35,12 @@ export default class Background extends Phaser.Group {
     this.add(this.game.add.sprite(5043, 393, 'fronthouse'));
     this.add(this.game.add.sprite(5570, 440, 'housesmall'));
     this.add(this.game.add.sprite(5920, 440, 'housesmall'));
-    this.add(this.game.add.sprite(5755, 413, 'housecolored'));
+    this.add(this.game.add.sprite(5740, 413, 'housecolored'));
     this.add(this.game.add.sprite(6000, 520, 'tree'));
     this.add(this.game.add.sprite(6225, 535, 'neuzekesland'));
-    this.add(this.game.add.sprite(6460, 520, 'tree'));
-    this.add(this.game.add.sprite(6650, 520, 'tree'));
-    this.add(this.game.add.sprite(6690, 520, 'tree'));
+    this.add(this.game.add.sprite(6470, 520, 'tree'));
+    this.add(this.game.add.sprite(6660, 520, 'tree'));
+    this.add(this.game.add.sprite(6700, 520, 'tree'));
 
   }
 

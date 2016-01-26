@@ -2,11 +2,8 @@
 @import 'reset';
 @import 'mixins';
 @import 'petals';
-//@import 'layout';
 
 @include font-face('pacificoregular');
-//@include font-face('pt_sansbold');
-//@include font-face('pt_sansregular');
 
 html,
 body {
@@ -19,7 +16,6 @@ html {
 }
 
 body {
-  height: 3000px;
   font-size: 1em;
   font-family: 'Helvetica neue', Helvetica, Arial, sans-serif;
 }
@@ -420,7 +416,7 @@ body > header {
   position: absolute;
   width: 100%;
   height: 600px;
-  top: 1530px;
+  top: 1580px;
   background-color: #FFFFFF;
 
   header h1{
@@ -466,7 +462,7 @@ body > header {
       margin-right: 40px;
       background-color: $purpleMain;
 
-      .image{
+      img.image{
         position: absolute;
         width: 260px;
         height: 240px;
@@ -476,7 +472,7 @@ body > header {
         z-index: 5;
       }
 
-      img{
+      img.icon{
         position: absolute;
         width: 50px;
         height: 50px;
@@ -506,6 +502,178 @@ body > header {
 
   }
 
+  p{
+    position: absolute;
+    width: 710px;
+    top: 530px;
+    left: 50%;
+    margin-left: -355px;
+    font-size: 1.6em;
+    font-weight: bold;
+    font-family: 'PT Sans', sans-serif;
+    line-height: 1.5em;
+    text-align: justify;
+    -moz-text-align-last: center;
+    text-align-last: center;
+    color: #333;
+    z-index: 20;
+    span{ color: $purpleMain; }
+  }
+
+}
+
+/* --- 4: Geliefd Streekproduct ------------------------------------------------------------------- */
+
+#streek {
+
+  position: absolute;
+  width: 100%;
+  height: 760px;
+  top: 2200px;
+  background-color: #FFFFFF;
+
+  header h1{
+    position: absolute;
+    width: 500px;
+    top: 195px;
+    left: 50%;
+    margin-left: -250px;
+    font-size: 5.6em;
+    font-family: 'pacifico';
+    text-align: center;
+    color: $purpleMain;
+    @include stroke(3px, #FFFFFF);
+    z-index: 20;
+  }
+
+  .coupleIllustration{
+    position: absolute;
+    width: 116px;
+    height: 160px;
+    top: 70px;
+    left: 50%;
+    margin-left: -58px;
+    @include bgImgUrl('CoupleIllustration.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 5;
+  }
+
+  .cityDecorLeft{
+    position: absolute;
+    width: 358px;
+    height: 170px;
+    top: 50px;
+    left: 0px;
+    @include bgImgUrl('CityDecorLeft.png');
+    z-index: 0;
+  }
+
+  .cityDecorRight{
+    position: absolute;
+    width: 434px;
+    height: 325px;
+    top: 0px;
+    right: 0px;
+    @include bgImgUrl('CityDecorRight.png');
+    z-index: 0;
+  }
+
+  .streekBg{
+    position: absolute;
+    width: 100%;
+    height: 628px;
+    top: 160px;
+    @include bgImgUrl('CadeauBg.svg');
+    background-size: 100% 628px;
+    transform: scaleX(-1);
+    z-index: 5;
+  }
+
+  .bgPurple{
+    position: absolute;
+    width: 100%;
+    height: 360px;
+    top: 450px;
+    background-color: $purpleMain;
+    z-index: 0;
+  }
+
+  p{
+    position: absolute;
+    width: 716px;
+    top: 300px;
+    left: 50%;
+    margin-left: -358px;
+    font-size: 1.6em;
+    font-weight: bold;
+    font-family: 'PT Sans', sans-serif;
+    line-height: 1.5em;
+    text-align: justify;
+    color: #FFF;
+    z-index: 20;
+    span{ color: $pinkLight; }
+  }
+
+  .bgWhite{
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    top: 570px;
+    background-color: #FFF;
+    z-index: 20;
+  }
+
+  .streekProductLabel{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 550px;
+    left: 50%;
+    margin-left: -75px;
+    @include bgImgUrl('streekProductLabel.png');
+    background-size: contain;
+    z-index: 30;
+  }
+
+  .neuzekesKar{
+    position: absolute;
+    width: 240px;
+    height: 180px;
+    top: 500px;
+    left: 17%;
+    @include bgImgUrl('NeuzekesFietsKar.png');
+    background-size: contain;
+    background-repeat: none;
+    z-index: 30;
+  }
+
+  .playGame{
+
+    position: absolute;
+    top: 580px;
+    left: 50%;
+    margin-left: 140px;
+    font-size: 1.7em;
+    font-weight: bold;
+    font-family: 'PT Sans', sans-serif;
+    line-height: 2em;
+    color: $purpleMain;
+    z-index: 35;
+
+    a{
+      margin-top: 8px;
+      padding: 6px 12px;
+      border-radius: 4px;
+      background-color: $purpleMain;
+      font-size: .9em;
+      text-decoration: none;
+      color: #FFF;
+    }
+
+  }
+
 }
 
 /* --- X: Game ---------------------------------------------------------------------- */
@@ -515,7 +683,7 @@ body > header {
   height: 100%;
   background: #e2f5ff; /* Old browsers */
   background: -moz-linear-gradient(top, #e2f5ff 0%, #f4fbff 72%, #efe6e1 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #e2f5ff 0%,#f4fbff 72%,#efe6e1 100%); /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-linear-gradient(top, #e2f5ff 0%,#f4fbff 72%,#efe6e1 100%); /* Chrome10-25, Safari5.1-6 */
   background: linear-gradient(to bottom, #e2f5ff 0%,#f4fbff 72%,#efe6e1 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 
   article > header{
@@ -809,14 +977,6 @@ body > header {
   }
 
 }
-
-/*#scoreScreen.won > header{
-  background-color: #77AE62;
-}
-
-#scoreScreen.lost > header{
-  background-color: #B02C61;
-}*/
 
 /* --- X: Footer --------------------------------------------------------------------- */
 
