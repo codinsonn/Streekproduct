@@ -11,10 +11,9 @@ export default class Play extends Phaser.State {
 
   create() {
 
-    this.hits = 0;
     this.passed = 0;
     this.customers = 0;
-    this.gameOver = false;
+    this.heartsScored = 0;
 
     this.game.physics.startSystem(Phaser.Physics.ARCADE);
     this.game.physics.arcade.gravity.y = 1200;
@@ -22,6 +21,9 @@ export default class Play extends Phaser.State {
     this.$pauseScreen = document.querySelector('#pauseScreen');
     this.$lightbox = document.querySelector('#lightbox');
     this.$lightbox.addEventListener('click', () => this.togglePause());
+
+    this.$heartsScored = document.querySelector('.heartsScored p');
+    this.$customersGained = document.querySelector('.costumersGained p');
 
     this.cursors = this.game.input.keyboard.createCursorKeys();
     this.pauseKey = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
@@ -46,7 +48,8 @@ export default class Play extends Phaser.State {
     this.personGenerator = this.game.time.events.loop(Phaser.Timer.SECOND * 2, this.generatePerson, this);
     this.personGenerator.timer.start();
 
-    this.game.paused = true;
+    this.gameOver = false;
+    this.togglePause();
 
   }
 
@@ -77,10 +80,18 @@ export default class Play extends Phaser.State {
 
   }
 
+  updateScoreLabels(){
+
+    this.$heartsScored.innerHTML = this.heartsScored;
+    this.$customersGained.innerHTML = this.customers;
+
+  }
+
   checkProgress(){
 
     if(this.background.x === -5600){
 
+      this.gameOver = true;
       this.player.setGameWon();
       this.ground.stopAutoScroll();
 
@@ -168,12 +179,14 @@ export default class Play extends Phaser.State {
   personHitHandler(person, cuberdon){
 
     cuberdon.destroy();
-    person.reset(person.x, person.y-4, -200, true);
+    this.heartsScored += 1;
 
-    this.hits += 1;
     if(person.getHasScored() === false){
       this.customers += 1;
     }
+
+    this.updateScoreLabels();
+    person.reset(person.x, person.y-4, -200, true);
 
     let heart = new Heart(this.game, person.x, person.y - 100);
     this.game.add.existing(heart);

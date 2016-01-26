@@ -42,14 +42,20 @@
   </nav>
   <!-- / Navigation -->
 
-  <!-- Healthbar -->
+  <!-- Player Stats -->
   <div class="healthbar">
     <div class="remainingHealth">&nbsp;</div>
   </div>
-  <!-- / Healthbar -->
+  <div class="heartsScored">
+    <p>0</p>
+  </div>
+  <div class="costumersGained">
+    <p>0</p>
+  </div>
+  <!-- / Player Stats -->
 
   <!-- PauseScreen -->
-  <article id="pauseScreen" class="show">
+  <article id="pauseScreen" class="hide">
     <header>
       <h1>Spel info / Pauze</h1>
     </header>
@@ -76,17 +82,17 @@
       <h3>Druk op 'Spatie' om het spel te starten</h3>
     </footer>
   </article>
-  <div id="lightbox" class="show">&nbsp;</div>
+  <div id="lightbox" class="hide">&nbsp;</div>
   <!-- / PauseScreen -->
 
   <!-- GameOverScreen
-  <article id="gameOverScreen" class="hide">
+  <article id="scoreScreen" class="hide">
     <header>
       <h1>Spel info / Pauze</h1>
     </header>
 
     <footer>
-      <h3>Druk op 'Spatie' om opnieuw te proberen</h3>
+      <h3>EindScore: <span class="score">0</span></h3>
     </footer>
   </article>
   <!-- / GameOverScreen -->

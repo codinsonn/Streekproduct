@@ -630,6 +630,24 @@ body > header p {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
+.game article > header {
+  position: absolute;
+  width: 100%;
+  height: 47px;
+  top: 0px;
+  left: 0px;
+  text-align: center;
+  background-color: #AE2F61;
+}
+
+.game article > header h1 {
+  margin-top: 10px;
+  font-size: 2.3em;
+  font-family: 'Pacifico', sans-serif;
+  text-shadow: 0 0 0 transparent, -1px -1px 0 #FFFFFF, 0px -1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, -1px 0px 0 #FFFFFF, 0px 0px 0 #FFFFFF, 1px 0px 0 #FFFFFF, -1px 1px 0 #FFFFFF, 0px 1px 0 #FFFFFF, 1px 1px 0 #FFFFFF, -2px -2px 0 #FFFFFF, -1px -2px 0 #FFFFFF, 0px -2px 0 #FFFFFF, 1px -2px 0 #FFFFFF, 2px -2px 0 #FFFFFF, -2px -1px 0 #FFFFFF, -1px -1px 0 #FFFFFF, 0px -1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, 2px -1px 0 #FFFFFF, -2px 0px 0 #FFFFFF, -1px 0px 0 #FFFFFF, 0px 0px 0 #FFFFFF, 1px 0px 0 #FFFFFF, 2px 0px 0 #FFFFFF, -2px 1px 0 #FFFFFF, -1px 1px 0 #FFFFFF, 0px 1px 0 #FFFFFF, 1px 1px 0 #FFFFFF, 2px 1px 0 #FFFFFF, -2px 2px 0 #FFFFFF, -1px 2px 0 #FFFFFF, 0px 2px 0 #FFFFFF, 1px 2px 0 #FFFFFF, 2px 2px 0 #FFFFFF;
+  color: #AE2F61;
+}
+
 .game .healthbar {
   position: fixed;
   width: 400px;
@@ -653,12 +671,53 @@ body > header p {
   background-color: #823F59;
 }
 
-.game .next, .game .prev {
-  position: absolute;
-  width: 30px;
+.game .heartsScored, .game .costumersGained {
+  position: fixed;
+  width: 80px;
   height: 30px;
   top: 50%;
-  margin-top: -15px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+  z-index: 30;
+}
+
+.game .heartsScored p, .game .costumersGained p {
+  position: absolute;
+  top: 7px;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+  text-shadow: 0 0 0 transparent, -1px -1px 0 #FFFFFF, 0px -1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, -1px 0px 0 #FFFFFF, 0px 0px 0 #FFFFFF, 1px 0px 0 #FFFFFF, -1px 1px 0 #FFFFFF, 0px 1px 0 #FFFFFF, 1px 1px 0 #FFFFFF, -2px -2px 0 #FFFFFF, -1px -2px 0 #FFFFFF, 0px -2px 0 #FFFFFF, 1px -2px 0 #FFFFFF, 2px -2px 0 #FFFFFF, -2px -1px 0 #FFFFFF, -1px -1px 0 #FFFFFF, 0px -1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, 2px -1px 0 #FFFFFF, -2px 0px 0 #FFFFFF, -1px 0px 0 #FFFFFF, 0px 0px 0 #FFFFFF, 1px 0px 0 #FFFFFF, 2px 0px 0 #FFFFFF, -2px 1px 0 #FFFFFF, -1px 1px 0 #FFFFFF, 0px 1px 0 #FFFFFF, 1px 1px 0 #FFFFFF, 2px 1px 0 #FFFFFF, -2px 2px 0 #FFFFFF, -1px 2px 0 #FFFFFF, 0px 2px 0 #FFFFFF, 1px 2px 0 #FFFFFF, 2px 2px 0 #FFFFFF;
+  color: #823F59;
+}
+
+.game .costumersGained {
+  left: 267px;
+  margin-top: -65px;
+  background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/game/HeadIcon.svg");
+}
+
+.game .costumersGained p {
+  left: 37px;
+}
+
+.game .heartsScored {
+  left: 260px;
+  margin-top: -10px;
+  background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/game/HeartIcon.svg");
+}
+
+.game .heartsScored p {
+  left: 40px;
+}
+
+.game .next, .game .prev {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  margin-top: -20px;
   border: none;
   outline: none;
   background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/game/Arrow.png");
@@ -698,7 +757,7 @@ body > header p {
   height: 100%;
   top: 0px;
   left: 0px;
-  background-color: rgba(200, 200, 200, 0.6);
+  background-color: rgba(200, 200, 200, 0.5);
   transition: opacity .5s;
   z-index: 10;
 }
@@ -709,7 +768,7 @@ body > header p {
   height: 400px;
   top: 50%;
   left: 60%;
-  margin-top: -200px;
+  margin-top: -220px;
   margin-left: -350px;
   border-radius: 8px;
   background-color: #FFFFFF;
@@ -717,24 +776,6 @@ body > header p {
   overflow: hidden;
   transition: opacity .4s;
   z-index: 20;
-}
-
-#pauseScreen header {
-  position: absolute;
-  width: 100%;
-  height: 47px;
-  top: 0px;
-  left: 0px;
-  text-align: center;
-  background-color: #AE2F61;
-}
-
-#pauseScreen header h1 {
-  margin-top: 10px;
-  font-size: 2.3em;
-  font-family: 'Pacifico', sans-serif;
-  text-shadow: 0 0 0 transparent, -1px -1px 0 #FFFFFF, 0px -1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, -1px 0px 0 #FFFFFF, 0px 0px 0 #FFFFFF, 1px 0px 0 #FFFFFF, -1px 1px 0 #FFFFFF, 0px 1px 0 #FFFFFF, 1px 1px 0 #FFFFFF, -2px -2px 0 #FFFFFF, -1px -2px 0 #FFFFFF, 0px -2px 0 #FFFFFF, 1px -2px 0 #FFFFFF, 2px -2px 0 #FFFFFF, -2px -1px 0 #FFFFFF, -1px -1px 0 #FFFFFF, 0px -1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, 2px -1px 0 #FFFFFF, -2px 0px 0 #FFFFFF, -1px 0px 0 #FFFFFF, 0px 0px 0 #FFFFFF, 1px 0px 0 #FFFFFF, 2px 0px 0 #FFFFFF, -2px 1px 0 #FFFFFF, -1px 1px 0 #FFFFFF, 0px 1px 0 #FFFFFF, 1px 1px 0 #FFFFFF, 2px 1px 0 #FFFFFF, -2px 2px 0 #FFFFFF, -1px 2px 0 #FFFFFF, 0px 2px 0 #FFFFFF, 1px 2px 0 #FFFFFF, 2px 2px 0 #FFFFFF;
-  color: #AE2F61;
 }
 
 #pauseScreen footer {
