@@ -29,7 +29,7 @@ export default class Play extends Phaser.State {
     this.cursors = this.game.input.keyboard.createCursorKeys();
     this.pauseKey = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
 
-    this.background = new Background(this.game, 300, this.game.height - 360);
+    this.background = new Background(this.game, 300, this.game.height - 685);
     this.game.add.existing(this.background);
 
     this.ground = new Ground(this.game, 0, this.game.height - 40, this.game.width + 600, this.game.height);

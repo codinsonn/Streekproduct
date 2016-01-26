@@ -93,7 +93,7 @@ The `sprites` mixin generates identical output to the CSS template
 */
 @font-face {
   font-family: "pacificoregular";
-  src: url("http://student.howest.be/thorr.stevens/20152016/MAIII/STREEKPRODUCT/assets/fonts/pacificoregular/pacificoregular.woff2") format("woff2"), url("http://student.howest.be/thorr.stevens/20152016/MAIII/STREEKPRODUCT/assets/fonts/pacificoregular/pacificoregular.woff") format("woff");
+  src: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/fonts/pacificoregular/pacificoregular.woff2") format("woff2"), url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/fonts/pacificoregular/pacificoregular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -172,7 +172,7 @@ nav {
   position: fixed;
   top: 0px;
   left: 0px;
-  background-image: url("http://student.howest.be/thorr.stevens/20152016/MAIII/STREEKPRODUCT/assets/img/MenuToggleBg.svg");
+  background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/MenuToggleBg.svg");
   background-repeat: no-repeat;
   transition: width .7s, height .8s, background-size .7s;
   overflow: hidden;
@@ -184,7 +184,7 @@ nav a#logo {
   width: 130px;
   height: 80px;
   left: 44px;
-  background-image: url("http://student.howest.be/thorr.stevens/20152016/MAIII/STREEKPRODUCT/assets/img/GeldhofLogo.png");
+  background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/GeldhofLogo.png");
   background-size: cover;
   transition: opacity .4s, top .5s;
 }
@@ -271,7 +271,7 @@ body > header .headerBg {
   left: 0px;
   width: 100%;
   height: 249px;
-  background-image: url("http://student.howest.be/thorr.stevens/20152016/MAIII/STREEKPRODUCT/assets/img/HeaderBg.png");
+  background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/HeaderBg.png");
   background-position: top center;
   background-repeat: no-repeat;
   background-color: #401D2A;
@@ -284,7 +284,7 @@ body > header h1.title a {
   height: 68px;
   top: 80px;
   left: 50%;
-  background-image: url("http://student.howest.be/thorr.stevens/20152016/MAIII/STREEKPRODUCT/assets/img/TypischGents.png");
+  background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/TypischGents.png");
   margin-left: -138px;
   z-index: 5;
 }
@@ -300,7 +300,7 @@ body > header .headerCuberdons {
   top: 170px;
   left: 50%;
   margin-left: -230px;
-  background-image: url("http://student.howest.be/thorr.stevens/20152016/MAIII/STREEKPRODUCT/assets/img/CuberdonsHeader.png");
+  background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/CuberdonsHeader.png");
   z-index: 8;
 }
 
@@ -392,7 +392,7 @@ body > header .heartDivider {
   top: 630px;
   left: 50%;
   margin-left: -200px;
-  background-image: url("http://student.howest.be/thorr.stevens/20152016/MAIII/STREEKPRODUCT/assets/img/HeartDivider.png");
+  background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/HeartDivider.png");
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -441,7 +441,7 @@ body > header p {
   top: 100px;
   left: 50%;
   margin-left: -201px;
-  background-image: url("http://student.howest.be/thorr.stevens/20152016/MAIII/STREEKPRODUCT/assets/img/ValentineBox.png");
+  background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/ValentineBox.png");
   z-index: 15;
 }
 
@@ -451,7 +451,7 @@ body > header p {
   height: 275px;
   top: 5px;
   left: 0px;
-  background-image: url("http://student.howest.be/thorr.stevens/20152016/MAIII/STREEKPRODUCT/assets/img/DecorLeft.png");
+  background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/DecorLeft.png");
   z-index: 0;
 }
 
@@ -461,7 +461,7 @@ body > header p {
   height: 151px;
   top: 38px;
   right: 0px;
-  background-image: url("http://student.howest.be/thorr.stevens/20152016/MAIII/STREEKPRODUCT/assets/img/DecorRight.png");
+  background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/DecorRight.png");
   z-index: 0;
 }
 
@@ -470,7 +470,7 @@ body > header p {
   width: 100%;
   height: 628px;
   top: 142px;
-  background-image: url("http://student.howest.be/thorr.stevens/20152016/MAIII/STREEKPRODUCT/assets/img/CadeauBg.svg");
+  background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/CadeauBg.svg");
   background-size: 100% 628px;
   z-index: 5;
 }
@@ -520,7 +520,7 @@ body > header p {
   top: 520px;
   left: 50%;
   margin-left: -500px;
-  background-image: url("http://student.howest.be/thorr.stevens/20152016/MAIII/STREEKPRODUCT/assets/img/Raspberry.png");
+  background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/Raspberry.png");
   z-index: 20;
 }
 
@@ -637,6 +637,7 @@ body > header p {
   top: 0px;
   left: 0px;
   text-align: center;
+  background-color: #B02C61;
 }
 
 .game article > header h1 {
@@ -654,7 +655,7 @@ body > header p {
   bottom: 0px;
   left: 0px;
   text-align: center;
-  background-color: #AE2F61;
+  background-color: #B02C61;
 }
 
 .game article > footer h3 {
@@ -711,7 +712,7 @@ body > header p {
 .game .customersGained {
   left: 267px;
   margin-top: -65px;
-  background-image: url("http://student.howest.be/thorr.stevens/20152016/MAIII/STREEKPRODUCT/assets/img/game/HeadIcon.svg");
+  background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/game/HeadIcon.svg");
 }
 
 .game .customersGained p {
@@ -721,7 +722,7 @@ body > header p {
 .game .heartsScored {
   left: 260px;
   margin-top: -10px;
-  background-image: url("http://student.howest.be/thorr.stevens/20152016/MAIII/STREEKPRODUCT/assets/img/game/HeartIcon.svg");
+  background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/game/HeartIcon.svg");
 }
 
 .game .heartsScored p {
@@ -736,7 +737,7 @@ body > header p {
   margin-top: -20px;
   border: none;
   outline: none;
-  background-image: url("http://student.howest.be/thorr.stevens/20152016/MAIII/STREEKPRODUCT/assets/img/game/Arrow.png");
+  background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/game/Arrow.png");
   background-repeat: no-repeat;
   background-position: center;
   background-color: #823F59;
@@ -920,74 +921,73 @@ body > header p {
   background-color: #77AE62;
 }
 
-#scoreScreen.won > header {
+/*#scoreScreen.won > header{
   background-color: #77AE62;
 }
 
-#scoreScreen.lost > header {
+#scoreScreen.lost > header{
   background-color: #B02C61;
-}
-
+}*/
 /* --- X: Footer --------------------------------------------------------------------- */
 /* --- Spritesheet ------------------------------------------------------------------- */
 .petal1 {
-  background-image: url("http://student.howest.be/thorr.stevens/20152016/MAIII/STREEKPRODUCT/assets/img/petals.png");
+  background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/petals.png");
   background-position: -378px 0px;
   width: 126px;
   height: 104px;
 }
 
 .petal2 {
-  background-image: url("http://student.howest.be/thorr.stevens/20152016/MAIII/STREEKPRODUCT/assets/img/petals.png");
+  background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/petals.png");
   background-position: -378px -104px;
   width: 119px;
   height: 80px;
 }
 
 .petal3 {
-  background-image: url("http://student.howest.be/thorr.stevens/20152016/MAIII/STREEKPRODUCT/assets/img/petals.png");
+  background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/petals.png");
   background-position: 0px 0px;
   width: 205px;
   height: 177px;
 }
 
 .petal4 {
-  background-image: url("http://student.howest.be/thorr.stevens/20152016/MAIII/STREEKPRODUCT/assets/img/petals.png");
+  background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/petals.png");
   background-position: 0px -177px;
   width: 115px;
   height: 119px;
 }
 
 .petal5 {
-  background-image: url("http://student.howest.be/thorr.stevens/20152016/MAIII/STREEKPRODUCT/assets/img/petals.png");
+  background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/petals.png");
   background-position: 0px -296px;
   width: 128px;
   height: 80px;
 }
 
 .petal6 {
-  background-image: url("http://student.howest.be/thorr.stevens/20152016/MAIII/STREEKPRODUCT/assets/img/petals.png");
+  background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/petals.png");
   background-position: -115px -177px;
   width: 140px;
   height: 95px;
 }
 
 .petal7 {
-  background-image: url("http://student.howest.be/thorr.stevens/20152016/MAIII/STREEKPRODUCT/assets/img/petals.png");
+  background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/petals.png");
   background-position: -205px 0px;
   width: 173px;
   height: 129px;
 }
 
 .petal8 {
-  background-image: url("http://student.howest.be/thorr.stevens/20152016/MAIII/STREEKPRODUCT/assets/img/petals.png");
+  background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/petals.png");
   background-position: -378px -184px;
   width: 63px;
   height: 99px;
 }
 
 .petal9 {
-  background-image: url("http://student.howest.be/thorr.stevens/20152016/MAIII/STREEKPRODUCT/assets/img/petals.png");
+  background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/petals.png");
   background-position: -441px -184px;
   width: 42px;
   height: 81px;

@@ -526,6 +526,7 @@ body > header {
     top: 0px;
     left: 0px;
     text-align: center;
+    background-color: #B02C61;
 
     h1{
       margin-top: 10px;
@@ -545,7 +546,7 @@ body > header {
     bottom: 0px;
     left: 0px;
     text-align: center;
-    background-color: #AE2F61;
+    background-color: #B02C61;
 
     h3{
       margin-top: 16px;
@@ -809,13 +810,13 @@ body > header {
 
 }
 
-#scoreScreen.won > header{
+/*#scoreScreen.won > header{
   background-color: #77AE62;
 }
 
 #scoreScreen.lost > header{
   background-color: #B02C61;
-}
+}*/
 
 /* --- X: Footer --------------------------------------------------------------------- */
 
