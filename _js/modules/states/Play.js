@@ -23,7 +23,8 @@ export default class Play extends Phaser.State {
     this.$lightbox.addEventListener('click', () => this.togglePause());
 
     this.$heartsScored = document.querySelector('.heartsScored p');
-    this.$customersGained = document.querySelector('.costumersGained p');
+    this.$customersGained = document.querySelector('.customersGained p');
+    this.$scoreScreen = document.querySelector('#scoreScreen');
 
     this.cursors = this.game.input.keyboard.createCursorKeys();
     this.pauseKey = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
@@ -50,6 +51,7 @@ export default class Play extends Phaser.State {
 
     this.gameOver = false;
     this.togglePause();
+    //this.gameLost();
 
   }
 
@@ -101,10 +103,51 @@ export default class Play extends Phaser.State {
 
   }
 
+  calculateEndScore(){
+
+    document.querySelector('.heartScore').innerHTML = this.heartsScored;
+    document.querySelector('.clientScore').innerHTML = this.customers;
+    document.querySelector('.healthScore').innerHTML = this.player.getHealth();
+
+    let clearScore, endScore;
+    if(this.player.getHealth() > 0){
+      clearScore = 100;
+      document.querySelector('.clearScore').innerHTML = 100;
+    }else{
+      clearScore = 0;
+      document.querySelector('.clearScore').innerHTML = 0;
+    }
+
+    endScore = this.heartsScored + this.customers + this.player.getHealth() + clearScore;
+    document.querySelector('.score span').innerHTML = endScore;
+
+  }
+
+  gameLost(){
+
+    console.log('[Game] Too bad! You\'ve lost!');
+
+    this.calculateEndScore();
+
+    document.querySelector('#scoreScreen header h1').innerHTML = 'Game Over';
+
+    this.$scoreScreen.className = 'lost show';
+    this.game.paused = true;
+
+  }
+
   gameWon(){
 
     console.log('[Game] Congratulations! You\'ve won!');
 
+    document.querySelector('.healthLabel').className = 'gained healthLabel';
+    document.querySelector('.clearLabel').className = 'gained clearLabel';
+
+    this.calculateEndScore();
+
+    document.querySelector('#scoreScreen header h1').innerHTML = 'Gewonnen!';
+
+    this.$scoreScreen.className = 'won show';
     this.game.paused = true;
 
   }
@@ -125,7 +168,7 @@ export default class Play extends Phaser.State {
         }else{
           this.player.playDeathAnimation();
           this.ground.bringToTop();
-          setTimeout(() => { this.game.paused = true; }, 400);
+          setTimeout(() => { this.gameLost(); }, 400);
         }
 
       }

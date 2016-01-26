@@ -49,7 +49,7 @@
   <div class="heartsScored">
     <p>0</p>
   </div>
-  <div class="costumersGained">
+  <div class="customersGained">
     <p>0</p>
   </div>
   <!-- / Player Stats -->
@@ -85,14 +85,31 @@
   <div id="lightbox" class="hide">&nbsp;</div>
   <!-- / PauseScreen -->
 
-  <!-- GameOverScreen
-  <article id="scoreScreen" class="hide">
+  <!-- GameOverScreen -->
+  <article id="scoreScreen" class="lost hide">
     <header>
-      <h1>Spel info / Pauze</h1>
+      <h1>Gewonnen!</h1>
     </header>
-
+    <section>
+      <header><h1>Final Score Calculation</h1></header>
+      <ul class="labels">
+        <li class="heartLabel">
+          <p>Gewonnen Harten:</p><p class="heartScore">0</p>
+        </li>
+        <li class="gained clientLabel">
+          <p>+ Klanten Bonus:</p><p class="clientScore">0</p>
+        </li>
+        <li class="lost healthLabel">
+          <p>+ Life Bonus:</p><p class="healthScore">0</p>
+        </li>
+        <li class="lost clearLabel">
+          <p>+ Clear Bonus:</p><p class="clearScore">0</p>
+        </li>
+      </ul>
+    </section>
     <footer>
-      <h3>EindScore: <span class="score">0</span></h3>
+      <div class="score">Score: <span>0</span></div>
+      <a href="game.html" class="replay">Replay</a>
     </footer>
   </article>
   <!-- / GameOverScreen -->
