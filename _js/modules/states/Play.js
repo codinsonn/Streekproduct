@@ -15,6 +15,8 @@ export default class Play extends Phaser.State {
     this.customers = 0;
     this.heartsScored = 0;
 
+    this.prevPersonFrame = 0;
+
     this.game.physics.startSystem(Phaser.Physics.ARCADE);
     this.game.physics.arcade.gravity.y = 1200;
 
@@ -243,8 +245,13 @@ export default class Play extends Phaser.State {
 
       let personX = this.game.rnd.integerInRange(this.game.width + 80, this.game.width + 340);
       let personY = this.game.height - 120;
-      let personFrame = this.game.rnd.integerInRange(1, 4);
+      let personFrame = this.game.rnd.integerInRange(1, 8);
       let personVelocity = this.game.rnd.integerInRange(-230, -170);
+
+      while(personFrame === this.prevPersonFrame){
+        personFrame = this.game.rnd.integerInRange(1, 8);
+      }
+      this.prevPersonFrame = personFrame;
 
       let person = new Person(this.game, personX, personY, personFrame);
       this.people.add(person, true);

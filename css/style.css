@@ -814,7 +814,7 @@ body > header p {
   top: 0px;
   left: 0px;
   text-align: center;
-  background-color: #B02C61;
+  background-color: #823F59;
 }
 
 .game article > header h1 {
@@ -822,7 +822,7 @@ body > header p {
   font-size: 2.3em;
   font-family: 'Pacifico', sans-serif;
   text-shadow: 0 0 0 transparent, -1px -1px 0 #FFFFFF, 0px -1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, -1px 0px 0 #FFFFFF, 0px 0px 0 #FFFFFF, 1px 0px 0 #FFFFFF, -1px 1px 0 #FFFFFF, 0px 1px 0 #FFFFFF, 1px 1px 0 #FFFFFF, -2px -2px 0 #FFFFFF, -1px -2px 0 #FFFFFF, 0px -2px 0 #FFFFFF, 1px -2px 0 #FFFFFF, 2px -2px 0 #FFFFFF, -2px -1px 0 #FFFFFF, -1px -1px 0 #FFFFFF, 0px -1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, 2px -1px 0 #FFFFFF, -2px 0px 0 #FFFFFF, -1px 0px 0 #FFFFFF, 0px 0px 0 #FFFFFF, 1px 0px 0 #FFFFFF, 2px 0px 0 #FFFFFF, -2px 1px 0 #FFFFFF, -1px 1px 0 #FFFFFF, 0px 1px 0 #FFFFFF, 1px 1px 0 #FFFFFF, 2px 1px 0 #FFFFFF, -2px 2px 0 #FFFFFF, -1px 2px 0 #FFFFFF, 0px 2px 0 #FFFFFF, 1px 2px 0 #FFFFFF, 2px 2px 0 #FFFFFF;
-  color: #AE2F61;
+  color: #823F59;
 }
 
 .game article > footer {
@@ -832,7 +832,7 @@ body > header p {
   bottom: 0px;
   left: 0px;
   text-align: center;
-  background-color: #B02C61;
+  background-color: #823F59;
 }
 
 .game article > footer h3 {
@@ -973,7 +973,7 @@ body > header p {
 }
 
 #pauseScreen header {
-  background-color: #AE2F61;
+  background-color: #823F59;
 }
 
 #infoWrapper {
