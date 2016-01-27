@@ -5,7 +5,7 @@ ExpiresByType image/jpg "access 1 month"
 ExpiresByType image/jpeg "access 1 month"
 ExpiresByType image/gif "access 1 month"
 ExpiresByType image/png "access 1 month"
-ExpiresByType text/css "access 1 month"
+## ExpiresByType text/css "access 1 month" ##
 ExpiresByType text/x-javascript "access 1 month"
 ExpiresDefault "access 1 month"
 </IfModule>

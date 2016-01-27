@@ -25,10 +25,8 @@
 <body class="order">
 
   <!-- Navigation -->
-  <div class="burger open">
-    <!--<div class="bun topBun">&nbsp;</div>
-    <div class="bun midBun">&nbsp;</div>
-    <div class="bun bottomBun">&nbsp;</div>-->
+  <div class="burger open hide">
+    &nbsp;
   </div>
   <nav class="menu open">
     <a href="index.html#intro" id="logo"><span>Geldhof Cuberdons</span></a>
@@ -36,7 +34,7 @@
       <li><a href="index.html#cadeaus">Valentijn Covers</a></li>
       <li><a href="index.html#win">Deel en Win</a></li>
       <li><a href="index.html#streek">Streekproduct</a></li>
-      <li><a href="bestel.html" class="active">Bestellen</a></li>
+      <li><a href="bestel.php" class="active">Bestellen</a></li>
       <li><a href="game.html">Het Spel</a></li>
     </ul>
   </nav>
@@ -51,6 +49,72 @@
 
   </header>
   <!-- / Header -->
+
+  <?php
+
+    if(!empty($_POST)){
+
+      $personalMessage = $_POST['txtPersonalMessage'];
+      $fullName = $_POST['txtFullName'];
+      $address = $_POST['txtAddress'];
+      $telNr = $_POST['txtTelNr'];
+
+      $to = $_POST['txtEmail'];
+      $from = "neusvoorpassie@geldhof.com";
+      $subject = "Valentinebox Bestelling Opgenomen!";
+
+      $headers = "MIME-Version: 1.0\r\n";
+      $date = date('D, d\t\h M Y h:i:s O');
+      $headers .= "Date: {$date}\r\n";
+      $headers .= "From: {$from}\r\n";
+      $headers .= "Reply-To: {$from}\r\n";
+      $headers .= "Subject: {$subject}\r\n";
+      $headers .= "X-Sender: {$from}\r\n";
+      $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+
+      $message = "<html>\r\n";
+      $message .= "<body>\r\n";
+      $message .= " <h2>Bevestiging Bestelling:</h2>";
+      $message .= " <p>-------------------------------</p>";
+      $message .= " <h1>1x Valentinebox Cuberdons</h1>";
+      $message .= " <p>\"{$personalMessage}\"</p>\r\n";
+      $message .= " <p>{$fullName}</p>\r\n";
+      $message .= " <p>{$address}</p>\r\n";
+      $message .= " <p>{$telNr}</p>\r\n";
+      $message .= " <p>-------------------------------</p>";
+      $message .= " <p>Uw persoonlijke valentijnsbox zal op 11, 12 of 13 februari rechtstreeks van de productielijn naar uw address worden gebracht.</p>";
+      $message .= " <p>(Jammer genoeg is #NeusVoorPassie echter geen echte campagne... Wij nemen dan dus ook geen verantwoordelijkheid voor enige betaalde bestellingen. Er word niks teruggestort. U passeert niet langs start.)</p>";
+      $message .= "</body>\r\n";
+      $message .= "</html>\r\n";
+
+      mail($to, $subject, $message, $headers);
+
+      $success = true;
+
+  ?>
+
+  <!-- Bevestiging -->
+  <article id="confirm">
+
+    <header>
+      <h1>Bestelling opgenomen!</h1>
+    </header>
+
+    <div class="valentineBox">&nbsp;</div>
+
+    <p>Er is een bevestigings e-mail verzonden naar het opgegeven mail-adres.</p>
+
+    <a href="index.html">Terug naar Homepage</a>
+
+  </article>
+  <div class="bgRadial2">&nbsp;</div>
+  <!-- / Bevestiging -->
+
+  <?php
+
+    }else{
+
+  ?>
 
   <!-- Personaliseer -->
   <article id="bestel">
@@ -95,11 +159,15 @@
     </form>
 
   </article>
+  <div class="bgRadial">&nbsp;</div>
+  <!-- / Personaliseer -->
+
+  <?php
+    }
+  ?>
   <div class="petal petal2">&nbsp;</div>
   <div class="petal petal4">&nbsp;</div>
   <div class="petal petal5">&nbsp;</div>
-  <div class="bgRadial">&nbsp;</div>
-  <!-- / Personaliseer -->
 
   <script src="js/vendor/phaser.min.js"></script>
   <script src="js/script.js"></script>

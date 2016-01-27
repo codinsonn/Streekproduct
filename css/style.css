@@ -1125,18 +1125,26 @@ body.order .petal5 {
   margin-left: -550px;
 }
 
-body.order .bgRadial {
+body.order .bgRadial, body.order .bgRadial2 {
   position: absolute;
   width: 700px;
   height: 500px;
-  top: 34px;
   left: 60%;
-  margin-left: -280px;
   background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/BgRadialGradient.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   opacity: .15;
   z-index: 0;
+}
+
+body.order .bgRadial {
+  top: 34px;
+  margin-left: -280px;
+}
+
+body.order .bgRadial2 {
+  top: 100px;
+  margin-left: -350px;
 }
 
 body.order header {
@@ -1307,6 +1315,78 @@ body.order header h2 {
   border-radius: 12px;
   border: none;
   outline: none;
+}
+
+#confirm {
+  position: absolute;
+  width: 780px;
+  top: 120px;
+  left: 60%;
+  margin-left: -390px;
+  z-index: 10;
+}
+
+#confirm header {
+  position: absolute;
+  width: 500px;
+  top: 280px;
+  left: 50%;
+  margin-left: -250px;
+  text-align: center;
+}
+
+#confirm header h1 {
+  position: absolute;
+  width: 100%;
+  font-size: 3.7em;
+  font-weight: bold;
+  font-family: 'PT Sans', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFF;
+}
+
+#confirm .valentineBox {
+  position: absolute;
+  width: 260px;
+  height: 180px;
+  top: 100px;
+  left: 50%;
+  margin-left: -130px;
+  background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/ValentineBox.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 10;
+}
+
+#confirm p {
+  position: absolute;
+  width: 100%;
+  top: 330px;
+  font-size: 1.7em;
+  font-weight: bold;
+  font-family: 'PT Sans', sans-serif;
+  text-align: center;
+  color: #FFF;
+}
+
+#confirm a {
+  position: absolute;
+  width: 300px;
+  top: 400px;
+  left: 50%;
+  margin-left: -150px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: white;
+  font-size: 2.2em;
+  font-weight: bold;
+  font-family: 'PT Sans', sans-serif;
+  text-align: center;
+  text-decoration: none;
+  color: #401D2A;
+  z-index: 35;
 }
 
 /* --- Spritesheet ------------------------------------------------------------------- */

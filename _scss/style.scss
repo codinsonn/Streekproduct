@@ -995,18 +995,26 @@ body.order {
   .petal4{ top: 294px; left: 60%; margin-left: 350px; }
   .petal5{ top: 500px; left: 60%; margin-left: -550px; }
 
-  .bgRadial{
+  .bgRadial, .bgRadial2{
     position: absolute;
     width: 700px;
     height: 500px;
-    top: 34px;
     left: 60%;
-    margin-left: -280px;
     @include bgImgUrl('BgRadialGradient.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     opacity: .15;
     z-index: 0;
+  }
+
+  .bgRadial{
+    top: 34px;
+    margin-left: -280px;
+  }
+
+  .bgRadial2{
+    top: 100px;
+    margin-left: -350px;
   }
 
   header{
@@ -1059,7 +1067,6 @@ body.order {
   top: 120px;
   left: 60%;
   margin-left: -390px;
-  //background-color: #FFF;
 
   header h1{
     display: none;
@@ -1186,6 +1193,82 @@ body.order {
       outline: none;
     }
 
+  }
+
+}
+
+#confirm{
+
+  position: absolute;
+  width: 780px;
+  top: 120px;
+  left: 60%;
+  margin-left: -390px;
+  z-index: 10;
+
+  header {
+
+    position: absolute;
+    width: 500px;
+    top: 280px;
+    left: 50%;
+    margin-left: -250px;
+    text-align: center;
+
+    h1{
+      position: absolute;
+      width: 100%;
+      font-size: 3.7em;
+      font-weight: bold;
+      font-family: 'PT Sans', sans-serif;
+      text-align: center;
+      text-transform: uppercase;
+      color: #FFF;
+    }
+
+  }
+
+  .valentineBox{
+    position: absolute;
+    width: 260px;
+    height: 180px;
+    top: 100px;
+    left: 50%;
+    margin-left: -130px;
+    @include bgImgUrl('ValentineBox.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 10;
+  }
+
+  p{
+    position: absolute;
+    width: 100%;
+    top: 330px;
+    font-size: 1.7em;
+    font-weight: bold;
+    font-family: 'PT Sans', sans-serif;
+    text-align: center;
+    color: #FFF;
+  }
+
+  a{
+    position: absolute;
+    width: 300px;
+    top: 400px;
+    left: 50%;
+    margin-left: -150px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 2.2em;
+    font-weight: bold;
+    font-family: 'PT Sans', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    color: $purpleHeader;
+    z-index: 35;
   }
 
 }
