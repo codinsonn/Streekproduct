@@ -20,6 +20,7 @@
 	<title>#NeusVoorPassie | Bestel</title>
   <!--<base href="http://student.howest.be/thorr.stevens/20152016/MAIII/STREEKPRODUCT/">-->
   <base href="http://localhost:1124/thorr.stevens/20152016/Streekproduct/">
+  <link rel="icon" href="favicon.png">
   <link rel="stylesheet" type="text/css" href="css/style.css"/>
 </head>
 <body class="order">
