@@ -264,17 +264,20 @@ body > header {
   height: 760px;
 }
 
-body > header .headerBg {
+body > header .headerBg, body > header .headerBgSmall {
   position: absolute;
   top: 0px;
   left: 0px;
   width: 100%;
-  height: 249px;
   background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/HeaderBg.png");
   background-position: top center;
   background-repeat: no-repeat;
   background-color: #401D2A;
   z-index: 0;
+}
+
+body > header .headerBg {
+  height: 249px;
 }
 
 body > header h1.title a {
@@ -1095,7 +1098,216 @@ body > header p {
   background-color: #77AE62;
 }
 
-/* --- X: Footer --------------------------------------------------------------------- */
+/* --- BestelPagina --------------------------------------------------------------------- */
+body.order {
+  background-color: #401D2A;
+}
+
+body.order .petal {
+  position: absolute;
+}
+
+body.order .petal2 {
+  top: 50px;
+  left: 60%;
+  margin-left: 130px;
+}
+
+body.order .petal4 {
+  top: 294px;
+  left: 60%;
+  margin-left: 350px;
+}
+
+body.order .petal5 {
+  top: 500px;
+  left: 60%;
+  margin-left: -550px;
+}
+
+body.order .bgRadial {
+  position: absolute;
+  width: 700px;
+  height: 500px;
+  top: 34px;
+  left: 60%;
+  margin-left: -280px;
+  background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/BgRadialGradient.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  opacity: .15;
+  z-index: 0;
+}
+
+body.order header {
+  position: fixed;
+  height: 80px;
+  z-index: 20;
+}
+
+body.order header .headerBgSmall {
+  height: 80px;
+  background-position: top center;
+}
+
+body.order header h1.orderTitle {
+  position: absolute;
+  width: 500px;
+  top: 18px;
+  left: 60%;
+  margin-left: -250px;
+  font-size: 3.4em;
+  font-weight: bold;
+  font-family: 'Pacifico', sans-serif;
+  text-align: center;
+  color: #FFD0DA;
+  z-index: 30;
+}
+
+body.order header h2 {
+  position: absolute;
+  width: 500px;
+  top: 120px;
+  left: 60%;
+  margin-left: -250px;
+  font-size: 3.4em;
+  font-weight: bold;
+  font-family: 'Pacifico', sans-serif;
+  text-align: center;
+  color: #FFD0DA;
+  z-index: 30;
+}
+
+#bestel {
+  position: absolute;
+  width: 780px;
+  top: 120px;
+  left: 60%;
+  margin-left: -390px;
+}
+
+#bestel header h1 {
+  display: none;
+}
+
+#bestel .personaliseer {
+  position: absolute;
+  width: 100%;
+}
+
+#bestel .personaliseer legend {
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  font-size: 3.7em;
+  font-weight: bold;
+  font-family: 'PT Sans', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFF;
+}
+
+#bestel .personaliseer label {
+  position: absolute;
+  top: 90px;
+  left: 40px;
+  font-size: 1.6em;
+  font-weight: bold;
+  font-family: 'PT Sans', sans-serif;
+  color: #FFD0DA;
+}
+
+#bestel .personaliseer textarea {
+  position: absolute;
+  width: 340px;
+  height: 100px;
+  top: 130px;
+  left: 40px;
+  padding: 14px;
+  border-radius: 12px;
+  background-color: #FFF;
+  font-size: 1.4em;
+  font-weight: bold;
+  font-family: 'PT Sans', sans-serif;
+  color: #333;
+  outline: none;
+  border: none;
+  resize: none;
+  z-index: 10;
+}
+
+#bestel .valentineBox {
+  position: absolute;
+  width: 260px;
+  height: 180px;
+  top: 84px;
+  left: 50%;
+  margin-left: -20px;
+  background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/ValentineBox.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 10;
+}
+
+#bestel .info {
+  position: absolute;
+  width: 100%;
+  top: 270px;
+}
+
+#bestel .info legend {
+  display: none;
+}
+
+#bestel .info label {
+  position: relative;
+  width: 200px;
+  height: 34px;
+  margin: 8px 0px;
+  padding: 9px 0px;
+  font-size: 1.6em;
+  font-weight: bold;
+  font-family: 'PT Sans', sans-serif;
+  color: #FFF;
+  text-align: right;
+  float: left;
+}
+
+#bestel .info input[type='text'] {
+  position: relative;
+  width: 380px;
+  height: 34px;
+  margin: 8px 20px;
+  padding: 9px 12px;
+  border-radius: 7px;
+  font-size: 1.4em;
+  font-weight: bold;
+  font-family: 'PT Sans', sans-serif;
+  text-align: center;
+  border: none;
+  outline: none;
+  color: #333;
+}
+
+#bestel .info input[type='submit'] {
+  position: absolute;
+  width: 200px;
+  top: 230px;
+  left: 50%;
+  margin-left: -100px;
+  padding: 7px;
+  background-color: #FFF;
+  font-size: 2em;
+  font-weight: bold;
+  font-family: 'PT Sans', sans-serif;
+  text-transform: uppercase;
+  color: #401D2A;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+}
+
 /* --- Spritesheet ------------------------------------------------------------------- */
 .petal1 {
   background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/petals.png");

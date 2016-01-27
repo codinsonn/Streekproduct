@@ -22,13 +22,13 @@
   <base href="http://localhost:1124/thorr.stevens/20152016/Streekproduct/">
   <link rel="stylesheet" type="text/css" href="css/style.css"/>
 </head>
-<body>
+<body class="order">
 
   <!-- Navigation -->
   <div class="burger open">
-    <div class="bun topBun">&nbsp;</div>
+    <!--<div class="bun topBun">&nbsp;</div>
     <div class="bun midBun">&nbsp;</div>
-    <div class="bun bottomBun">&nbsp;</div>
+    <div class="bun bottomBun">&nbsp;</div>-->
   </div>
   <nav class="menu open">
     <a href="index.html#intro" id="logo"><span>Geldhof Cuberdons</span></a>
@@ -45,24 +45,61 @@
   <!-- Header -->
   <header id="header">
 
-    <h1></h1>
+    <h1 class="orderTitle">Personaliseer &amp; Bestel</h1>
 
-
+    <div class="headerBgSmall">&nbsp;</div>
 
   </header>
   <!-- / Header -->
 
-  <!-- Bestel -->
+  <!-- Personaliseer -->
   <article id="bestel">
 
     <header>
-      <h1>Het ideale Cadeau</h1>
+      <h1>Personaliseer</h1>
     </header>
 
+    <form action="" method="post">
 
+      <fieldset class="personaliseer">
+
+        <legend>Persoonlijke Boodschap</legend>
+
+        <label for="txtPersonalMessage">Wat wilt u dat er op de Valentijncover gedrukt word?</label>
+        <textarea name="txtPersonalMessage" required autofocus placeholder="&quot;Voor mijn liefste neuzeke&quot;"></textarea>
+
+      </fieldset>
+
+      <div class="valentineBox">&nbsp;</div>
+
+      <fieldset class="info">
+
+        <legend>Personal Info</legend>
+
+        <label for="txtFullName">Uw volledige naam</label>
+        <input type="text" name="txtFullName" required autofocus placeholder="" id="txtFullName" value=""/>
+
+        <label for="txtEmail">Uw e-mail address</label>
+        <input type="text" name="txtEmail" required autofocus placeholder="" id="txtEmail" value=""/>
+
+        <label for="txtAdress">Uw address</label>
+        <input type="text" name="txtAdress" required autofocus placeholder="" id="txtAdress" value=""/>
+
+        <label for="txtTelNr">Uw telefoon / gsm Nr.</label>
+        <input type="text" name="txtTelNr" required autofocus placeholder="" id="txtTelNr" value=""/>
+
+        <input type="submit" name="submit" id="btnBestel" value="Bestellen"/>
+
+      </fieldset>
+
+    </form>
 
   </article>
-  <!-- / Bestel -->
+  <div class="petal petal2">&nbsp;</div>
+  <div class="petal petal4">&nbsp;</div>
+  <div class="petal petal5">&nbsp;</div>
+  <div class="bgRadial">&nbsp;</div>
+  <!-- / Personaliseer -->
 
   <script src="js/vendor/phaser.min.js"></script>
   <script src="js/script.js"></script>

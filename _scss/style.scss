@@ -182,16 +182,19 @@ body > header {
   width: 100%;
   height: 760px;
 
-  .headerBg {
+  .headerBg, .headerBgSmall {
     position: absolute;
     top: 0px; left: 0px;
     width: 100%;
-    height: 249px;
     @include bgImgUrl('HeaderBg.png');
     background-position: top center;
     background-repeat: no-repeat;
     background-color: $purpleHeader;
     z-index: 0;
+  }
+
+  .headerBg{
+    height: 249px;
   }
 
   h1.title a{
@@ -978,11 +981,213 @@ body > header {
 
 }
 
-/* --- X: Footer --------------------------------------------------------------------- */
+/* --- BestelPagina --------------------------------------------------------------------- */
 
+body.order {
 
+  background-color: $purpleHeader;
 
+  .petal{
+    position: absolute;
+  }
 
+  .petal2{ top: 50px; left: 60%; margin-left: 130px; }
+  .petal4{ top: 294px; left: 60%; margin-left: 350px; }
+  .petal5{ top: 500px; left: 60%; margin-left: -550px; }
+
+  .bgRadial{
+    position: absolute;
+    width: 700px;
+    height: 500px;
+    top: 34px;
+    left: 60%;
+    margin-left: -280px;
+    @include bgImgUrl('BgRadialGradient.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    opacity: .15;
+    z-index: 0;
+  }
+
+  header{
+
+    position: fixed;
+    height: 80px;
+    z-index: 20;
+
+    .headerBgSmall {
+      height: 80px;
+      background-position: top center;
+    }
+
+    h1.orderTitle{
+      position: absolute;
+      width: 500px;
+      top: 18px;
+      left: 60%;
+      margin-left: -250px;
+      font-size: 3.4em;
+      font-weight: bold;
+      font-family: 'Pacifico', sans-serif;
+      text-align: center;
+      color: $pinkLight;
+      z-index: 30;
+    }
+
+    h2{
+      position: absolute;
+      width: 500px;
+      top: 120px;
+      left: 60%;
+      margin-left: -250px;
+      font-size: 3.4em;
+      font-weight: bold;
+      font-family: 'Pacifico', sans-serif;
+      text-align: center;
+      color: $pinkLight;
+      z-index: 30;
+    }
+
+  }
+
+}
+
+#bestel{
+
+  position: absolute;
+  width: 780px;
+  top: 120px;
+  left: 60%;
+  margin-left: -390px;
+  //background-color: #FFF;
+
+  header h1{
+    display: none;
+  }
+
+  .personaliseer{
+
+    position: absolute;
+    width: 100%;
+
+    legend{
+      position: absolute;
+      top: 10px;
+      left: 0px;
+      font-size: 3.7em;
+      font-weight: bold;
+      font-family: 'PT Sans', sans-serif;
+      text-align: center;
+      text-transform: uppercase;
+      color: #FFF;
+    }
+
+    label{
+      position: absolute;
+      top: 90px;
+      left: 40px;
+      font-size: 1.6em;
+      font-weight: bold;
+      font-family: 'PT Sans', sans-serif;
+      color: $pinkLight;
+    }
+
+    textarea{
+      position: absolute;
+      width: 340px;
+      height: 100px;
+      top: 130px;
+      left: 40px;
+      padding: 14px;
+      border-radius: 12px;
+      background-color: #FFF;
+      font-size: 1.4em;
+      font-weight: bold;
+      font-family: 'PT Sans', sans-serif;
+      color: #333;
+      outline: none;
+      border: none;
+      resize: none;
+      z-index: 10;
+    }
+
+  }
+
+  .valentineBox{
+    position: absolute;
+    width: 260px;
+    height: 180px;
+    top: 84px;
+    left: 50%;
+    margin-left: -20px;
+    @include bgImgUrl('ValentineBox.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 10;
+  }
+
+  .info{
+
+    position: absolute;
+    width: 100%;
+    top: 270px;
+
+    legend{
+      display: none;
+    }
+
+    label{
+      position: relative;
+      width: 200px;
+      height: 34px;
+      margin: 8px 0px;
+      padding: 9px 0px;
+      font-size: 1.6em;
+      font-weight: bold;
+      font-family: 'PT Sans', sans-serif;
+      color: #FFF;
+      text-align: right;
+      float: left;
+    }
+
+    input[type='text']{
+      position: relative;
+      width: 380px;
+      height: 34px;
+      margin: 8px 20px;
+      padding: 9px 12px;
+      border-radius: 7px;
+      font-size: 1.4em;
+      font-weight: bold;
+      font-family: 'PT Sans', sans-serif;
+      text-align: center;
+      border: none;
+      outline: none;
+      color: #333;
+    }
+
+    input[type='submit']{
+      position: absolute;
+      width: 200px;
+      top: 230px;
+      left: 50%;
+      margin-left: -100px;
+      padding: 7px;
+      background-color: #FFF;
+      font-size: 2em;
+      font-weight: bold;
+      font-family: 'PT Sans', sans-serif;
+      text-transform: uppercase;
+      color: $purpleHeader;
+      border-radius: 12px;
+      border: none;
+      outline: none;
+    }
+
+  }
+
+}
 
 /* --- Spritesheet ------------------------------------------------------------------- */
 
