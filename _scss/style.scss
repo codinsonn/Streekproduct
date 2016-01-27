@@ -1165,6 +1165,7 @@ body.order {
       border: none;
       outline: none;
       color: #333;
+      z-index: 10;
     }
 
     input[type='submit']{
