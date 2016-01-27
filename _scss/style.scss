@@ -893,12 +893,12 @@ body > header {
 #scoreScreen {
 
   position: fixed;
-  width: 240px;
+  width: 300px;
   height: 190px;
   top: 50%;
   left: 60%;
   margin-top: -100px;
-  margin-left: -120px;
+  margin-left: -150px;
   border-radius: 8px;
   background-color: #FFF;
   //box-shadow: 0 0 2px 0px rgba(66, 66, 66, .4);
@@ -1117,9 +1117,9 @@ body.order {
     position: absolute;
     width: 260px;
     height: 180px;
-    top: 84px;
+    top: 85px;
     left: 50%;
-    margin-left: -20px;
+    margin-left: -19px;
     @include bgImgUrl('ValentineBox.png');
     background-size: contain;
     background-position: center;
@@ -1151,7 +1151,7 @@ body.order {
       float: left;
     }
 
-    input[type='text']{
+    input[type='text'], input[type='email'], input[type='tel']{
       position: relative;
       width: 380px;
       height: 34px;

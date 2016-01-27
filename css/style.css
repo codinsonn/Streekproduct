@@ -1018,12 +1018,12 @@ body > header p {
 
 #scoreScreen {
   position: fixed;
-  width: 240px;
+  width: 300px;
   height: 190px;
   top: 50%;
   left: 60%;
   margin-top: -100px;
-  margin-left: -120px;
+  margin-left: -150px;
   border-radius: 8px;
   background-color: #FFF;
   transition: opacity .4s;
@@ -1240,9 +1240,9 @@ body.order header h2 {
   position: absolute;
   width: 260px;
   height: 180px;
-  top: 84px;
+  top: 85px;
   left: 50%;
-  margin-left: -20px;
+  margin-left: -19px;
   background-image: url("http://localhost:1124/thorr.stevens/20152016/Streekproduct/assets/img/ValentineBox.png");
   background-size: contain;
   background-position: center;
@@ -1274,7 +1274,7 @@ body.order header h2 {
   float: left;
 }
 
-#bestel .info input[type='text'] {
+#bestel .info input[type='text'], #bestel .info input[type='email'], #bestel .info input[type='tel'] {
   position: relative;
   width: 380px;
   height: 34px;
